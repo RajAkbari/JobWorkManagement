@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "JobWorkManagement", "http://localhost:10076", "{14D204DE-C706-4B35-895C-E64DB1B51C60}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_10076"
+		Debug.AspNetCompiler.PhysicalPath = "F:\Technology\ASP.Net\JobWork Management\JobWorkManagement\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10076\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_10076"
+		Release.AspNetCompiler.PhysicalPath = "F:\Technology\ASP.Net\JobWork Management\JobWorkManagement\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10076\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "F:\Technology\ASP.Net\JobWork Management\JobWorkManagement\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14D204DE-C706-4B35-895C-E64DB1B51C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D204DE-C706-4B35-895C-E64DB1B51C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0E96C0D-FD12-421F-96CE-62BB4C2CF617}
+	EndGlobalSection
+EndGlobal
