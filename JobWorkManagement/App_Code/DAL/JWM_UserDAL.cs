@@ -62,5 +62,54 @@ namespace JobWorkManagement.DAL
         }
 
         #endregion SelectByUserNameAndPassword
+
+        #region CheckUser
+        public DataTable CheckUser(SqlString UserName)
+        {
+
+            using (SqlConnection objConn = new SqlConnection(ConnectionString))
+            {
+                objConn.Open();
+                using (SqlCommand objCmd = objConn.CreateCommand())
+                {
+                    try
+                    {
+                        #region Prepare Command
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        objCmd.CommandText = "PR_JWM_User_CheckUser";
+                        objCmd.Parameters.AddWithValue("@UserName", UserName);
+                        #endregion Prepare Command
+
+                        #region ReadData and Set Controls
+                        DataTable dt = new DataTable();
+                        using (SqlDataReader objSDR = objCmd.ExecuteReader())
+                        {
+                            dt.Load(objSDR);
+                        }
+                        return dt;
+
+                        #endregion ReadData and Set Controls
+                    }
+                    catch (SqlException sqlex)
+                    {
+                        Message = sqlex.InnerException.Message.ToString();
+                        return null;
+                    }
+                    catch (Exception ex)
+                    {
+                        Message = ex.InnerException.Message.ToString();
+                        return null;
+                    }
+                    finally
+                    {
+                        if (objConn.State == ConnectionState.Open)
+                            objConn.Close();
+                    }
+                }
+            }
+
+        }
+
+        #endregion CheckUser
     }
 }

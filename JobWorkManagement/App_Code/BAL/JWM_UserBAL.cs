@@ -22,5 +22,15 @@ namespace JobWorkManagement.BAL
         }
 
         #endregion SelectByUserNameAndPassword
+
+        #region CheckByUserName
+
+        public DataTable CheckUser(SqlString UserName)
+        {
+            JWM_UserDAL dalUser = new JWM_UserDAL();
+            return dalUser.CheckUser(UserName);
+        }
+
+        #endregion CheckByUserName
     }
 }
