@@ -7,3 +7,7 @@ JobWorkManagement/packages/Habanero.3.0.1/lib/Habanero.Console.dll
 JobWorkManagement/packages/Habanero.3.0.1/lib/Habanero.DB.dll
 JobWorkManagement/packages/Habanero.3.0.1/lib/Habanero.Base.dll
 JobWorkManagement/.vs/JobWorkManagement/v16/.suo
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
