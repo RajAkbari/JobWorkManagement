@@ -34,7 +34,6 @@
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="SrNo" HeaderText="Sr." />
                                 <asp:BoundField DataField="JobTypeName" HeaderText="Job Type" />
-                                <asp:BoundField DataField="Remarks" HeaderText="Remarks" NullDisplayText="-" />
                                 <asp:BoundField DataField="CreationDate" HeaderText="Creation Date" DataFormatString="{0:dd/MM/yyyy}" />
                                 <asp:BoundField DataField="ModifiedDate" HeaderText="Modified Date" DataFormatString="{0:dd/MM/yyyy}" />
                             </Columns>
