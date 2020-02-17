@@ -25,7 +25,7 @@ namespace JobWorkManagement.DAL
                     {
                         #region Prepare Command
                         objCmd.CommandType = CommandType.StoredProcedure;
-                        objCmd.CommandText = "PR_JWM_JobWorkParty_Search";
+                        objCmd.CommandText = "PR_JWM_WorkParty_Search";
                         objCmd.Parameters.AddWithValue("@WorkPartyName", WorkPartyName);
 
                         #endregion Prepare Command

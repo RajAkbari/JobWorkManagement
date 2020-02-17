@@ -71,6 +71,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
             gvWorkPartyList.DataSource = dtWorkParty;
             gvWorkPartyList.DataBind();
             lblCount.Text = dtWorkParty.Rows.Count.ToString();
+            lblRecord.Visible = false;
         }
         else
         {
@@ -106,6 +107,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
     protected void btnClear_Click(object sender, EventArgs e)
     {
         txtWorkParty.Text = "";
+        search();
     }
     #endregion Button : Clear
 }
