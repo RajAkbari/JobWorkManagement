@@ -21,12 +21,11 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
         if (!Page.IsPostBack)
         {
             FillWorkPartyGridView();
-            FillDropDownList();
         }
     }
     #endregion Load Event
 
-    #region FillGameCategoryGridView
+    #region FillWorkPartyGridView
 
     private void FillWorkPartyGridView()
     {
@@ -47,14 +46,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
         }
     }
 
-    #endregion FillGameCategoryGridView
-
-    #region FillDropDownList
-    private void FillDropDownList()
-    {
-        CommanFillMethods.FillDropDownListWorkPartyID(ddlWorkParty);
-    }
-    #endregion FillDropDownList
+    #endregion FillWorkPartyGridView
 
     #region Search
     protected void btnShow_Click(object sender, EventArgs e)
@@ -66,13 +58,14 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
     #region FillGridViewOnSearch
     private void search()
     {
-        SqlInt32 WorkPartyID = SqlInt32.Null;
+        SqlString WorkPartyName = SqlString.Null;
 
-        if (ddlWorkParty.SelectedIndex > 0)
-            WorkPartyID = Convert.ToInt32(ddlWorkParty.SelectedValue);
+
+        if (txtWorkParty.Text.Trim() != "")
+            WorkPartyName = txtWorkParty.Text.Trim();
 
         JWM_WorkPartyBAL balWorkParty = new JWM_WorkPartyBAL();
-        DataTable dtWorkParty = balWorkParty.SelectDuplicate(WorkPartyID);
+        DataTable dtWorkParty = balWorkParty.SelectDuplicate(WorkPartyName);
         if (dtWorkParty != null && dtWorkParty.Rows.Count > 0)
         {
             gvWorkPartyList.DataSource = dtWorkParty;
@@ -112,7 +105,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
     #region Button : Clear
     protected void btnClear_Click(object sender, EventArgs e)
     {
-        ddlWorkParty.SelectedValue = "-1";
+        txtWorkParty.Text = "";
     }
     #endregion Button : Clear
 }

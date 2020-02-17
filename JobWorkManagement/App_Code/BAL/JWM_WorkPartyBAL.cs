@@ -14,10 +14,10 @@ namespace JobWorkManagement.BAL
     public class JWM_WorkPartyBAL:JWM_WorkPartyBALBase
     {
         #region Search
-        public DataTable SelectDuplicate(SqlInt32 WorkPartyID)
+        public DataTable SelectDuplicate(SqlString WorkPartyName)
         {
             JWM_WorkPartyDAL dalJWM_WorkParty = new JWM_WorkPartyDAL();
-            return dalJWM_WorkParty.SelectDuplicate(WorkPartyID);
+            return dalJWM_WorkParty.SelectDuplicate(WorkPartyName);
         }
         #endregion Search
     }

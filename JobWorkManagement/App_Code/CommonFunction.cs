@@ -30,7 +30,7 @@ namespace JobWorkManagement
             }
             else
             {
-                txt = "Panding";
+                txt = "Pending";
             }
 
             return txt;

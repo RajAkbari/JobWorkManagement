@@ -14,7 +14,7 @@ namespace JobWorkManagement.DAL
     public class JWM_WorkPartyDAL:JWM_WorkPartyDALBase
     {
         #region Search
-        public DataTable SelectDuplicate(SqlInt32 WorkPartyID)
+        public DataTable SelectDuplicate(SqlString WorkPartyName)
         {
             using (SqlConnection objConn = new SqlConnection(ConnectionString))
             {
@@ -26,7 +26,7 @@ namespace JobWorkManagement.DAL
                         #region Prepare Command
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkParty_Search";
-                        objCmd.Parameters.AddWithValue("@WorkPartyID", WorkPartyID);
+                        objCmd.Parameters.AddWithValue("@WorkPartyName", WorkPartyName);
 
                         #endregion Prepare Command
 

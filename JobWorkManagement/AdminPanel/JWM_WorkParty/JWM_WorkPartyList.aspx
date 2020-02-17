@@ -23,7 +23,7 @@
             <div class="card-body">
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass=" form-control form-control-sm "></asp:DropDownList>
+                        <asp:TextBox ID="txtWorkParty" runat="server" CssClass=" form-control form-control-sm " placeholder="Work Party"></asp:TextBox>
                     </div>
                     <div class="col-sm-4"></div>
                     <div class="col-sm-2">
