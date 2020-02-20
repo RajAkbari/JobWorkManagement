@@ -82,11 +82,11 @@
                                 <asp:BoundField DataField="SrNo" HeaderText="Sr." />
                                 <asp:BoundField DataField="JobTypeName" HeaderText="Job Type" />
                                 <asp:BoundField DataField="WorkPartyName" HeaderText="Party" ItemStyle-Width="15%" />
-                                <asp:BoundField DataField="QuantityReceived" HeaderText="Qty Received" Visible="false" />
+                                <asp:BoundField DataField="QuantityReceived" HeaderText="Qty Received" Visible="false"  />
                                 <asp:BoundField DataField="QuantityDamaged" HeaderText="Qty Damaged" Visible="false" />
-                                <asp:BoundField DataField="QuantityActual" HeaderText="Qty Actual" ItemStyle-ForeColor="DarkBlue" />
-                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty Complete" ItemStyle-ForeColor="Green" />
-                                <asp:BoundField DataField="QuantityPanding" HeaderText="Qty Panding" ItemStyle-ForeColor="red"  />
+                                <asp:BoundField DataField="QuantityActual" HeaderText="Qty<br/>Actual" HtmlEncode="false"  ItemStyle-ForeColor="DarkBlue" />
+                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty<br/>Complete" HtmlEncode="false" ItemStyle-ForeColor="Green" />
+                                <asp:BoundField DataField="QuantityPanding" HeaderText="Qty<br/>Panding" HtmlEncode="false" ItemStyle-ForeColor="red"  />
                                 <asp:BoundField DataField="JobWorkReceiveDate" HeaderText="Receive Date" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-Width="15%" />
                                 <asp:BoundField DataField="EstimatedDeliveryDate" HeaderText="Estimated Date" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-Width="15%" />
                                 <asp:BoundField DataField="Rate" HeaderText="Rate" />

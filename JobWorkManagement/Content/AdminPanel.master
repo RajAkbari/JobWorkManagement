@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<%=ResolveClientUrl("~/Content/assets/bootstrap/css/bootstrap.min.css")%>" />
     <link rel="stylesheet" href="<%=ResolveClientUrl("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i")%>" />
     <link rel="stylesheet" href="<%=ResolveClientUrl("https://use.fontawesome.com/releases/v5.7.1/css/all.css")%>" />
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Content/assets/js/select2/select2.css")%>" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -96,8 +97,101 @@
         <script src="<%=ResolveClientUrl("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js")%>"></script>
         <script src="<%=ResolveClientUrl("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js")%>"></script>
         <script src="<%=ResolveClientUrl("https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js")%>"></script>
-
         <script src="<%=ResolveClientUrl("/Content/assets/js/script.min.js?h=cda46db5f8853791105ff4715b7208f3")%>"></script>
+        <script src="<%=ResolveClientUrl("/Content/assets/js/select2/select2.min.js")%>"></script>
+                <script>
+
+            jQuery(document).ready(function () {
+                //ComponentsFormTools.init();
+
+            });
+
+            $('select.multiselect2').select2({
+                allowClear: true
+            });
+
+            Page = System.WebForms.PageRequestManager.getInstance();
+            Page.add_beginRequest(OnBeginRequest);
+            Page.add_endRequest(endRequest);
+
+            function OnBeginRequest(sender, args) {
+                Metronic.blockUI({
+                    boxed: true
+                });
+            }
+
+            function endRequest(sender, args) {
+                Metronic.unblockUI();
+                $('select').select2({
+                    width: 'fixed'
+                });
+
+                $('.timepicker-no-seconds').timepicker({
+                    autoclose: true,
+                    minuteStep: 5,
+                    defaultTime: null
+                });
+
+                $('.timepicker').parent('.input-group').on('blur', '.input-group-btn', function (e) {
+                    e.preventDefault();
+                    $(this).parent('.input-group').find('.timepicker').timepicker('hideWidget');
+                });
+
+                $(".form_meridian_datetime").datetimepicker({
+                    isRTL: Metronic.isRTL(),
+                    format: "dd-mm-yyyy HH:ii P",
+                    showMeridian: true,
+                    autoclose: true,
+                    pickerPosition: (Metronic.isRTL() ? "bottom-right" : "bottom-left"),
+                    todayBtn: true,
+                    todayHighlight: true
+                });
+
+                $('.date-picker-nofuture').datepicker({
+                    startDate: "01-01-1900",
+                    endDate: "new date()",
+                    autoclose: true,
+                    todayHighlight: true
+                });
+                $('.date-picker-nopastdate').datepicker({
+                    startDate: "new date()",
+                    todayHighlight: true
+                });
+                $('.date-picker').datepicker({
+                    startDate: "01-01-1900",
+                    autoclose: true,
+                    todayHighlight: true
+                });
+                $('a.modalButton').on('click', function (e) {
+                    var src = $(this).attr('href');
+                    var target = $(this).attr('data-target');
+
+                    $(target + " iframe").attr({
+                        'src': src
+                    });
+                });
+
+                var initPickers = function () {
+                    //init date pickers
+                    $('.date-picker').datepicker({
+                        rtl: Metronic.isRTL(),
+                        autoclose: true,
+                        todayHighlight: true
+                    });
+                }
+
+                initPickers();
+                $('select.multiselect2').select2({
+                    allowClear: true
+                });
+
+                function closeModalAndRefreshPage() {
+                    $('.modal').modal('hide');
+                    location.reload();
+                }
+            }
+
+        </script>
     </form>
 </body>
 </html>

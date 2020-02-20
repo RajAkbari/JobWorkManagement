@@ -35,7 +35,7 @@
             <div class="card-body">
                 <div class="form-group row">
                     <div class="col-sm-3">
-                        <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass=" form-control form-control-sm "></asp:DropDownList>
+                        <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass=" form-control select2me"></asp:DropDownList>
                     </div>
                     <div class="col-sm-7">
                         <div class="form-group input-group input-daterange">
