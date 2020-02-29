@@ -1,11 +1,8 @@
 ﻿using JobWorkManagement.DAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// Summary description for JWM_PaymentReceiveBALBase
@@ -15,6 +12,7 @@ namespace JobWorkManagement.BAL
     public abstract class JWM_PaymentReceiveBALBase
     {
         #region Local Variables
+
         protected string _Message;
 
         public string Message
@@ -28,6 +26,7 @@ namespace JobWorkManagement.BAL
                 _Message = value;
             }
         }
+
         #endregion Local Variables
 
         #region Insert Operation
@@ -103,6 +102,7 @@ namespace JobWorkManagement.BAL
             JWM_PaymentReceiveDAL dalJWM_PaymentReceive = new JWM_PaymentReceiveDAL();
             return dalJWM_PaymentReceive.SelectView(PaymentReceiveID);
         }
+
         #endregion Select Operations
     }
 }

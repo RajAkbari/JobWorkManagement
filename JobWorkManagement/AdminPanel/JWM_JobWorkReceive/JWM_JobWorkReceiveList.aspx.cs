@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 public partial class AdminPanel_JWM_WorkReceive_WorkReceiveList : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["UserID"] == null)
@@ -21,9 +22,11 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveList : System.Web.UI.
             FillDropDownList();
         }
     }
+
     #endregion Load Event
 
     #region FillJobWorkReceiveGridView
+
     private void FillJobWorkReceiveGridView()
     {
         if (Session["UserID"] != null)
@@ -42,9 +45,11 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveList : System.Web.UI.
             }
         }
     }
+
     #endregion FillJobWorkReceiveGridView
 
     #region GvJobWorkReceive_RowCommand
+
     protected void GvJobWorkReceive_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "DeleteRecord" && e.CommandArgument != null)
@@ -60,23 +65,29 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveList : System.Web.UI.
             }
         }
     }
+
     #endregion GvJobWorkReceive_RowCommand
 
     #region FillDropDownList
+
     private void FillDropDownList()
     {
         CommanFillMethods.FillDropDownListWorkPartyID(ddlWorkParty);
     }
+
     #endregion FillDropDownList
 
     #region Search
+
     protected void btnShow_Click(object sender, EventArgs e)
     {
         search();
     }
+
     #endregion Search
 
     #region FillGridViewOnSearch
+
     private void search()
     {
         SqlInt32 WorkPartyID = SqlInt32.Null;
@@ -107,17 +118,18 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveList : System.Web.UI.
             gvJobWorkReceiveList.DataBind();
             lblRecord.Text = "No Record Found";
         }
-
     }
+
     #endregion FillGridViewOnSearch
 
     #region Button : Clear
+
     protected void btnClear_Click(object sender, EventArgs e)
     {
         ddlWorkParty.SelectedValue = "-1";
         txtfromdate.Text = "";
         txttodate.Text = "";
     }
-    #endregion Button : Clear
 
+    #endregion Button : Clear
 }

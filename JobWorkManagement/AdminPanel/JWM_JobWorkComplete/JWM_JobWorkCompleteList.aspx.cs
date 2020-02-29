@@ -1,18 +1,15 @@
 ﻿using JobWorkManagement;
 using JobWorkManagement.BAL;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_WorkComplete_WorkCompleteList : System.Web.UI.Page
 {
-
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["UserID"] == null)
@@ -25,9 +22,11 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteList : System.Web.U
             FillDropDownList();
         }
     }
+
     #endregion Load Event
 
     #region FillGameCategoryGridView
+
     private void FillJobWorkCompleteGridView()
     {
         if (Session["UserID"] != null)
@@ -46,9 +45,11 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteList : System.Web.U
             }
         }
     }
+
     #endregion FillGameCategoryGridView
 
     #region GvJobWorkComplete_RowCommand
+
     protected void GvJobWorkComplete_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "DeleteRecord" && e.CommandArgument != null)
@@ -64,23 +65,29 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteList : System.Web.U
             }
         }
     }
+
     #endregion GvJobWorkComplete_RowCommand
 
     #region FillDropDownList
+
     private void FillDropDownList()
     {
         CommanFillMethods.FillDropDownListWorkPartyID(ddlWorkParty);
     }
+
     #endregion FillDropDownList
 
     #region Search
+
     protected void btnShow_Click(object sender, EventArgs e)
     {
         search();
     }
+
     #endregion Search
 
     #region FillGridViewOnSearch
+
     private void search()
     {
         SqlInt32 WorkPartyID = SqlInt32.Null;
@@ -111,16 +118,18 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteList : System.Web.U
             gvJobWorkCompleteList.DataBind();
             lblRecord.Text = "No Record Found";
         }
-
     }
+
     #endregion FillGridViewOnSearch
 
     #region Button : Clear
+
     protected void btnClear_Click(object sender, EventArgs e)
     {
         ddlWorkParty.SelectedValue = "-1";
         txtfromdate.Text = "";
         txttodate.Text = "";
     }
+
     #endregion Button : Clear
 }

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/AdminPanel.master" AutoEventWireup="true" CodeFile="JWM_PaymentReceiveList.aspx.cs" Inherits="AdminPanel_JWM_PaymentReceive_PaymentReceiveList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-     <style>
+    <style>
         .input-group-addon {
             padding: .5rem .75rem;
             margin-bottom: 0;
@@ -30,7 +30,7 @@
         </div>
 
         <div class="card shadow">
-             <div class="card-header py-3">
+            <div class="card-header py-3">
                 <p class="text-primary m-0 font-weight-bold"><i class="fas fa-cogs sidebar-brand-text mx-1"></i><span>Search</span></p>
             </div>
             <div class="card-body">
@@ -88,4 +88,3 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

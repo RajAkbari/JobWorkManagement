@@ -1,12 +1,8 @@
-﻿
-using JobWorkManagement.DAL;
+﻿using JobWorkManagement.DAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 namespace JobWorkManagement.BAL
 {

@@ -9,8 +9,7 @@
     <title>Log In</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../Content/assets/bootstrap/css/styles.min.css" /> 
-
+    <link rel="stylesheet" href="../Content/assets/bootstrap/css/styles.min.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -24,12 +23,12 @@
                         <h2 class="text-info font-weight-light mb-5"><i class="fa fa-diamond"></i>&nbsp;Job Work Management</h2>
                         <!-- End: Your company -->
                         <!-- Start: Login form -->
-                         <asp:Label runat="server" ID="lblMessage" EnableViewState="false" />
+                        <asp:Label runat="server" ID="lblMessage" EnableViewState="false" />
                         <!-- Start: Email -->
                         <div class="form-group">
                             <label class="text-secondary">User Name</label>
                             <%--<input class="form-control" type="text" required="" title="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email" />--%>
-                            <asp:TextBox runat="server" ID="txtUserName" CssClass="form-control"  ></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtUserName" CssClass="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator runat="server" ID="rfvUserName" ControlToValidate="txtUserName" Display="Dynamic" ErrorMessage="Enter User Name" CssClass="text-danger" ValidationGroup="User" />
                         </div>
                         <!-- End: Email -->
@@ -71,7 +70,6 @@
         <!-- End: ♣ Login form Page BS4 ♣ -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
     </form>
 </body>
 </html>

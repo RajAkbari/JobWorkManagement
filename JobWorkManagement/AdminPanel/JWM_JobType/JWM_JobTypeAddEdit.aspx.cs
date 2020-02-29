@@ -1,19 +1,13 @@
 ﻿using JobWorkManagement.BAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_JobType_JobTypeAddEdit : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -25,9 +19,11 @@ public partial class AdminPanel_JWM_JobType_JobTypeAddEdit : System.Web.UI.Page
             if (Request.QueryString["JobTypeID"] != null)
             {
                 #region Load Data in Edit Mode
+
                 LoadControls(Convert.ToInt32(Request.QueryString["JobTypeID"]));
                 lblPageHeader.Text = "Edit Job Type";
                 btnSave.Text = "Update";
+
                 #endregion Load Data in Edit Mode
             }
             else
@@ -36,14 +32,15 @@ public partial class AdminPanel_JWM_JobType_JobTypeAddEdit : System.Web.UI.Page
             }
         }
     }
+
     #endregion Load Event
 
     #region LoadControls
+
     private void LoadControls(SqlInt32 JobTypeID)
     {
         if (Session["UserID"] != null)
         {
-
             JWM_JobTypeENT entJobType = new JWM_JobTypeENT();
             JWM_JobTypeBAL balJobType = new JWM_JobTypeBAL();
 
@@ -60,6 +57,7 @@ public partial class AdminPanel_JWM_JobType_JobTypeAddEdit : System.Web.UI.Page
     #endregion LoadControls
 
     #region Button : Save
+
     protected void btnSave_Click(object sender, EventArgs e)
     {
         #region Server Side Validation
@@ -78,6 +76,7 @@ public partial class AdminPanel_JWM_JobType_JobTypeAddEdit : System.Web.UI.Page
         }
 
         #endregion Server Side Validation
+
         if (Session["UserID"] != null)
         {
             JWM_JobTypeENT entJobType = new JWM_JobTypeENT();
@@ -117,13 +116,15 @@ public partial class AdminPanel_JWM_JobType_JobTypeAddEdit : System.Web.UI.Page
             #endregion Gather Data
         }
     }
+
     #endregion Button : Save
 
     #region Button : Cancel
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-
     }
+
     #endregion Button : Cancel
 
     #region ClearControls

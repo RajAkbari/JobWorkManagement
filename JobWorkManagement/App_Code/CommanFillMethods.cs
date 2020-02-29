@@ -1,10 +1,5 @@
 ﻿using JobWorkManagement.BAL;
-using JobWorkManagement.DAL;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI.WebControls;
 
 /// <summary>
@@ -14,7 +9,7 @@ namespace JobWorkManagement
 {
     public class CommanFillMethods
     {
-        #region FillDropDownList 
+        #region FillDropDownList
 
         public static void FillDropDownListJobTypeID(DropDownList ddl)
         {
@@ -25,7 +20,7 @@ namespace JobWorkManagement
             ddl.DataBind();
             ddl.Items.Insert(0, new ListItem("Select Job Type", "-1"));
         }
-        
+
         public static void FillDropDownListWorkPartyID(DropDownList ddl)
         {
             JWM_WorkPartyBAL balWorkParty = new JWM_WorkPartyBAL();

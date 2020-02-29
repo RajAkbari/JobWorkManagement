@@ -1,6 +1,6 @@
 /**
  * Select2 Polish translation.
- * 
+ *
  * @author  Jan Kondratowicz <jan@kondratowicz.pl>
  * @author  Uriy Efremochkin <efremochkin@uriy.me>
  * @author  Michał Połtyn <mike@poltyn.com>
@@ -19,7 +19,7 @@
 
     $.extend($.fn.select2.defaults, $.fn.select2.locales['pl']);
 
-    function character (n, word, pluralSuffix) {
-        return " " + n + " " + word + (n == 1 ? "" : n%10 < 5 && n%10 > 1 && (n%100 < 5 || n%100 > 20) ? pluralSuffix : "ów");
+    function character(n, word, pluralSuffix) {
+        return " " + n + " " + word + (n == 1 ? "" : n % 10 < 5 && n % 10 > 1 && (n % 100 < 5 || n % 100 > 20) ? pluralSuffix : "ów");
     }
 })(jQuery);

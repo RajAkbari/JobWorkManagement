@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/AdminPanel.master" AutoEventWireup="true" CodeFile="JWM_PaymentReceiveDetails.aspx.cs" Inherits="AdminPanel_JWM_PaymentReceive_JWM_PaymentReceiveDetails" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cphContent" runat="Server">
     <div class="container-fluid">
         <%--Collepse Effect for View page Start--%>
         <div class="block">
@@ -13,7 +13,6 @@
                 <div class="card-header py-3">
                     <p class="text-primary m-0 text-xl-center font-weight-bold"><i class="fas fa-exclamation-circle sidebar-brand-text mx-1"></i><span>Job Work Complete Info</span></p>
                 </div>
-
             </div>
             <div class="shadow-lg card">
                 <div class="card bg-light">
@@ -35,19 +34,19 @@
                                 <asp:Label ID="lblWorkPartyName" runat="server" Text='<%# string.Concat(" : ",Eval("WorkPartyName")) %>'></asp:Label>
                                     </label>
                                 </div>
-                             
+
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Payment Receive Date &nbsp; : &nbsp;
                                 <asp:Label ID="lblPaymentReceiveDate" runat="server" Text='<%# string.Concat(" : ",Eval("PaymentReceiveDate")) %>'></asp:Label>
                                     </label>
-                                </div> 
+                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Amount &nbsp; : &nbsp;
                                 <asp:Label ID="lblAmount" runat="server" Text='<%# string.Concat(" : ",Eval("Amount")) %>'></asp:Label>
                                     </label>
-                                </div> 
+                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Creation Date &nbsp; : &nbsp;
@@ -64,11 +63,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" Runat="Server">
+<asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

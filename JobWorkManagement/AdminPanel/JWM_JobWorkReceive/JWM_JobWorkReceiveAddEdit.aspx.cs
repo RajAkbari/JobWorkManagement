@@ -2,16 +2,13 @@
 using JobWorkManagement.BAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_WorkReceive_WorkReceiveAddEdit : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -24,9 +21,11 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveAddEdit : System.Web.
             if (Request.QueryString["JobWorkReceiveID"] != null)
             {
                 #region Load Data in Edit Mode
+
                 LoadControls(Convert.ToInt32(Request.QueryString["JobWorkReceiveID"]));
                 lblPageHeader.Text = "Edit Work Receive";
                 btnSave.Text = "Update";
+
                 #endregion Load Data in Edit Mode
             }
             else
@@ -35,19 +34,19 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveAddEdit : System.Web.
             }
         }
     }
+
     #endregion Load Event
 
     #region LoadControls
+
     private void LoadControls(SqlInt32 JobWorkReceiveID)
     {
         if (Session["UserID"] != null)
         {
-
             JWM_JobWorkReceiveENT entJobWorkReceive = new JWM_JobWorkReceiveENT();
             JWM_JobWorkReceiveBAL balJobWorkReceive = new JWM_JobWorkReceiveBAL();
 
             entJobWorkReceive = balJobWorkReceive.SelectByPK(JobWorkReceiveID);
-
 
             if (!entJobWorkReceive.JobWorkReceiveDate.IsNull)
                 txtWorkReceiveDate.Text = entJobWorkReceive.JobWorkReceiveDate.Value.ToString("yyyy-MM-dd");
@@ -57,7 +56,6 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveAddEdit : System.Web.
 
             if (!entJobWorkReceive.WorkPartyID.IsNull)
                 ddlWorkParty.SelectedValue = entJobWorkReceive.WorkPartyID.Value.ToString();
-
 
             if (!entJobWorkReceive.QuantityReceived.IsNull)
                 txtReceiveQuantity.Text = entJobWorkReceive.QuantityReceived.Value.ToString();
@@ -88,6 +86,7 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveAddEdit : System.Web.
     #endregion LoadControls
 
     #region Button : Save
+
     protected void btnSave_Click(object sender, EventArgs e)
     {
         #region Server Side Validation
@@ -121,13 +120,13 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveAddEdit : System.Web.
         if (txtTotalAmount.Text.Trim() == String.Empty)
             strError += "- Enter Total Amount<br />";
 
-
         if (strError.Trim() != String.Empty)
         {
             lblMessage.Text = "Kindly Correct Following Error(s)<br />" + strError; ;
         }
 
         #endregion Server Side Validation
+
         if (Session["UserID"] != null)
         {
             JWM_JobWorkReceiveENT entJobWorkReceive = new JWM_JobWorkReceiveENT();
@@ -193,13 +192,15 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveAddEdit : System.Web.
             #endregion Gather Data
         }
     }
+
     #endregion Button : Save
 
     #region Button : Cancel
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-
     }
+
     #endregion Button : Cancel
 
     #region FillDropDownList

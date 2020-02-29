@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
+﻿using System.Data.SqlTypes;
 
 /// <summary>
 /// Summary description for JobTypeENTBase
@@ -14,6 +10,7 @@ namespace JobWorkManagement.ENT
         #region Properties
 
         protected SqlInt32 _JobTypeID;
+
         public SqlInt32 JobTypeID
         {
             get
@@ -27,6 +24,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _JobTypeName;
+
         public SqlString JobTypeName
         {
             get
@@ -40,6 +38,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _UserID;
+
         public SqlInt32 UserID
         {
             get
@@ -53,6 +52,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _Remarks;
+
         public SqlString Remarks
         {
             get
@@ -66,6 +66,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _CreationDate;
+
         public SqlDateTime CreationDate
         {
             get
@@ -79,6 +80,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _ModifiedDate;
+
         public SqlDateTime ModifiedDate
         {
             get
@@ -90,6 +92,7 @@ namespace JobWorkManagement.ENT
                 _ModifiedDate = value;
             }
         }
+
         #endregion Properties
     }
 }

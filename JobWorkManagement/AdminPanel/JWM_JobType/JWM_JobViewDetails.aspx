@@ -13,7 +13,6 @@
                 <div class="card-header py-3">
                     <p class="text-primary m-0 text-xl-center font-weight-bold"><i class="fas fa-exclamation-circle sidebar-brand-text mx-1"></i><span>Job Type Info</span></p>
                 </div>
-
             </div>
             <div class="shadow-lg card">
                 <div class="card bg-light">
@@ -35,7 +34,7 @@
                                 <asp:Label ID="lblJobTypeName" runat="server" Text='<%# string.Concat(" : ",Eval("JobTypeName")) %>'></asp:Label>
                                     </label>
                                 </div>
-<%--                                <div class="form-group row">
+                                <%--                                <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Remarks &nbsp; : &nbsp;
                                 <asp:Label ID="lblRemarks" runat="server" Text='<%# string.Concat(" : ",Eval("Remarks")) %>' ></asp:Label>
@@ -57,11 +56,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

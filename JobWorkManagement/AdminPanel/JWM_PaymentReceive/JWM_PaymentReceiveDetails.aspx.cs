@@ -1,15 +1,11 @@
 ﻿using JobWorkManagement.BAL;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_PaymentReceive_JWM_PaymentReceiveDetails : System.Web.UI.Page
 {
     #region Page Load
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -20,9 +16,11 @@ public partial class AdminPanel_JWM_PaymentReceive_JWM_PaymentReceiveDetails : S
             }
         }
     }
+
     #endregion Page Load
 
     #region FillControls
+
     private void FillControls()
     {
         if (Request.QueryString["PaymentReceiveID"] != null)
@@ -33,7 +31,6 @@ public partial class AdminPanel_JWM_PaymentReceive_JWM_PaymentReceiveDetails : S
             {
                 foreach (DataRow dr in dtJWM_PaymentReceive.Rows)
                 {
-
                     if (!dr["PaymentReceiveID"].Equals(DBNull.Value))
                         lblPaymentReceiveID.Text = Convert.ToString(dr["PaymentReceiveID"]);
 
@@ -51,11 +48,10 @@ public partial class AdminPanel_JWM_PaymentReceive_JWM_PaymentReceiveDetails : S
 
                     if (!dr["ModifiedDate"].Equals(DBNull.Value))
                         lblModifiedDate.Text = Convert.ToString(dr["ModifiedDate"]);
-
-
                 }
             }
         }
     }
+
     #endregion FillControls
 }

@@ -35,7 +35,6 @@
                                 <label>Received Quantity</label>
                                 <asp:TextBox type="text" ID="txtReceiveQuantity" runat="server" class="form-control" placeholder="Enter Total Quantity"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvQuantityReceive" runat="server" ControlToValidate="txtReceiveQuantity" ErrorMessage="Enter Received Quantity" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -43,7 +42,6 @@
                                 <label>Damage Quantity</label>
                                 <asp:TextBox type="text" ID="txtDamageQuantity" runat="server" class="form-control" placeholder="Enter Damage Quantity"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvDamageQuantity" runat="server" ControlToValidate="txtDamageQuantity" ErrorMessage="Enter Damaged Quantity" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -51,7 +49,6 @@
                                 <label>Actual Quanity</label>
                                 <asp:TextBox type="text" ID="txtActualQuantity" runat="server" class="form-control" placeholder="Enter Actual Quantity"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvActualQuantity" runat="server" ControlToValidate="txtActualQuantity" ErrorMessage="Enter Actual Quantity" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-
                             </div>
                         </div>
                     </div>
@@ -75,13 +72,11 @@
                                     <label>Rate(Per Quantity)</label>
                                     <asp:TextBox type="text" ID="txtRate" runat="server" class="form-control" placeholder="Enter Rate"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvRate" runat="server" ControlToValidate="txtRate" ErrorMessage="Enter Rate" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-
                                 </div>
                                 <div class="col-lg-6">
                                     <label>Amount</label>
                                     <asp:TextBox type="text" ID="txtTotalAmount" runat="server" class="form-control" placeholder="Enter Total Amount "></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvTotalAmount" runat="server" ControlToValidate="txtTotalAmount" ErrorMessage="Enter Total Amount" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-
                                 </div>
                             </div>
                         </div>
@@ -91,19 +86,18 @@
                         </div>
                     </div>
                     <br />
-                            <div class="form-check">
-                                <asp:CheckBox ID="ckbIsActive" runat="server"  />
-                                <label class="form-check-label" for="ckbIsActive">Is Complete</label>
-                         </div>
-                            <div class="btn fa-pull-right">
-                                <asp:Button runat="server" ID="btnSave" type="Submit" class="btn btn-primary btn-sm d-sm-inline-block" Text="Save" OnClick="btnSave_Click" />
-                                <asp:HyperLink ID="hlCancel" runat="server" NavigateUrl="~/AdminPanel/JWM_JobWorkReceive/JWM_JobWorkReceiveList.aspx" type="reset" class="btn btn-secondary btn-sm d-sm-inline-block">Cancel</asp:HyperLink>
-                            </div>
-                        
-                 </div>
+                    <div class="form-check">
+                        <asp:CheckBox ID="ckbIsActive" runat="server" />
+                        <label class="form-check-label" for="ckbIsActive">Is Complete</label>
+                    </div>
+                    <div class="btn fa-pull-right">
+                        <asp:Button runat="server" ID="btnSave" type="Submit" class="btn btn-primary btn-sm d-sm-inline-block" Text="Save" OnClick="btnSave_Click" />
+                        <asp:HyperLink ID="hlCancel" runat="server" NavigateUrl="~/AdminPanel/JWM_JobWorkReceive/JWM_JobWorkReceiveList.aspx" type="reset" class="btn btn-secondary btn-sm d-sm-inline-block">Cancel</asp:HyperLink>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 
@@ -161,4 +155,3 @@
         });
     </script>
 </asp:Content>
-

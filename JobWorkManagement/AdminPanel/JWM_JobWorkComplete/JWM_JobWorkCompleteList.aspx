@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/AdminPanel.master" AutoEventWireup="true" CodeFile="JWM_JobWorkCompleteList.aspx.cs" Inherits="AdminPanel_JWM_WorkComplete_WorkCompleteList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-     <style>
+    <style>
         .input-group-addon {
             padding: .5rem .75rem;
             margin-bottom: 0;
@@ -29,7 +29,7 @@
         </div>
 
         <div class="card shadow">
-             <div class="card-header py-3">
+            <div class="card-header py-3">
                 <p class="text-primary m-0 font-weight-bold"><i class="fas fa-cogs sidebar-brand-text mx-1"></i><span>Search</span></p>
             </div>
             <div class="card-body">
@@ -55,7 +55,7 @@
         &nbsp;
 
         <div class="card shadow">
-             <div class="card-header py-3">
+            <div class="card-header py-3">
                 <p class="text-primary m-0 font-weight-bold">
                     <i class="fas fa-search sidebar-brand-text mx-1"></i><span>Search Result</span>&nbsp;
                     <asp:Label ID="lblRecord" runat="server" CssClass="text-dark mb-0"></asp:Label>
@@ -83,11 +83,8 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

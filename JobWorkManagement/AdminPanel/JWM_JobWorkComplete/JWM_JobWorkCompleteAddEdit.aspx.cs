@@ -2,16 +2,13 @@
 using JobWorkManagement.BAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -24,9 +21,11 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.We
             if (Request.QueryString["JobWorkCompleteID"] != null)
             {
                 #region Load Data in Edit Mode
+
                 LoadControls(Convert.ToInt32(Request.QueryString["JobWorkCompleteID"]));
                 lblPageHeader.Text = "Edit Work Complete";
                 btnSave.Text = "Update";
+
                 #endregion Load Data in Edit Mode
             }
             else
@@ -35,6 +34,7 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.We
             }
         }
     }
+
     #endregion Load Event
 
     #region FillDropDownList
@@ -43,14 +43,16 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.We
     {
         CommanFillMethods.FillDropDownListWorkPartyID(ddlWorkParty);
     }
+
     protected void ddlWorkParty_SelectedIndexChanged(object sender, EventArgs e)
     {
         CommanFillMethods.FillDropDownListWorkReceiveID(ddlWorkReceive, Convert.ToInt32(ddlWorkParty.SelectedValue));
-
     }
+
     #endregion FillDropDownList
 
     #region LoadControls
+
     private void LoadControls(SqlInt32 JobWorkCompleteID)
     {
         if (Session["UserID"] != null)
@@ -59,7 +61,6 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.We
             JWM_JobWorkCompleteBAL balJobWorkComplete = new JWM_JobWorkCompleteBAL();
 
             entJobWorkComplete = balJobWorkComplete.SelectByPK(JobWorkCompleteID);
-
 
             if (!entJobWorkComplete.JobWorkCompleteDate.IsNull)
                 txtWorkCompletedDate.Text = entJobWorkComplete.JobWorkCompleteDate.Value.ToString("yyyy-MM-dd");
@@ -83,6 +84,7 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.We
     #endregion LoadControls
 
     #region Button : Save
+
     protected void btnSave_Click(object sender, EventArgs e)
     {
         #region Server Side Validation
@@ -104,13 +106,13 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.We
         if (txtRemarks.Text.Trim() == String.Empty)
             strError += "- Enter remarks<br />";
 
-
         if (strError.Trim() != String.Empty)
         {
             lblMessage.Text = "Kindly Correct Following Error(s)<br />" + strError; ;
         }
 
         #endregion Server Side Validation
+
         if (Session["UserID"] != null)
         {
             JWM_JobWorkCompleteENT entJobWorkComplete = new JWM_JobWorkCompleteENT();
@@ -159,25 +161,22 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteAddEdit : System.We
             #endregion Gather Data
         }
     }
+
     #endregion Button : Save
 
     #region Button : Cancel
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-
     }
-    #endregion Button : Cancel
 
-   
+    #endregion Button : Cancel
 
     #region ClearControls
 
     private void ClearControls()
     {
-
     }
 
     #endregion ClearControls
-
-   
 }

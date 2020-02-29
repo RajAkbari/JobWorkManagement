@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
+﻿using System.Data.SqlTypes;
 
 /// <summary>
 /// Summary description for JWM_JobWorkReceiveENTBase
@@ -12,7 +8,9 @@ namespace JobWorkManagement.ENT
     public abstract class JWM_JobWorkReceiveENTBase
     {
         #region Properties
+
         protected SqlInt32 _JobWorkReceiveID;
+
         public SqlInt32 JobWorkReceiveID
         {
             get
@@ -26,6 +24,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _JobWorkReceiveDate;
+
         public SqlDateTime JobWorkReceiveDate
         {
             get
@@ -39,6 +38,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _JobTypeID;
+
         public SqlInt32 JobTypeID
         {
             get
@@ -52,6 +52,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _WorkPartyID;
+
         public SqlInt32 WorkPartyID
         {
             get
@@ -65,6 +66,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _QuantityReceived;
+
         public SqlInt32 QuantityReceived
         {
             get
@@ -78,6 +80,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _QuantityDamaged;
+
         public SqlInt32 QuantityDamaged
         {
             get
@@ -91,6 +94,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _QuantityActual;
+
         public SqlInt32 QuantityActual
         {
             get
@@ -104,6 +108,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _EstimatedDeliveryDate;
+
         public SqlDateTime EstimatedDeliveryDate
         {
             get
@@ -117,6 +122,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDecimal _Rate;
+
         public SqlDecimal Rate
         {
             get
@@ -130,6 +136,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDecimal _TotalAmount;
+
         public SqlDecimal TotalAmount
         {
             get
@@ -143,6 +150,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlBoolean _IsActive;
+
         public SqlBoolean IsActive
         {
             get
@@ -156,6 +164,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _UserID;
+
         public SqlInt32 UserID
         {
             get
@@ -169,6 +178,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _Remarks;
+
         public SqlString Remarks
         {
             get
@@ -182,6 +192,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _CreationDate;
+
         public SqlDateTime CreationDate
         {
             get
@@ -195,6 +206,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _ModifiedDate;
+
         public SqlDateTime ModifiedDate
         {
             get
@@ -206,6 +218,7 @@ namespace JobWorkManagement.ENT
                 _ModifiedDate = value;
             }
         }
+
         #endregion Properties
     }
 }

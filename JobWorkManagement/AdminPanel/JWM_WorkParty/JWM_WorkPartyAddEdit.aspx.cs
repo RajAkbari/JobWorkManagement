@@ -1,16 +1,13 @@
 ﻿using JobWorkManagement.BAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_WorkParty_WorkPartyAddEdit : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -22,9 +19,11 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyAddEdit : System.Web.UI.P
             if (Request.QueryString["WorkPartyID"] != null)
             {
                 #region Load Data in Edit Mode
+
                 LoadControls(Convert.ToInt32(Request.QueryString["WorkPartyID"]));
                 lblPageHeader.Text = "Edit Work Party";
                 btnSave.Text = "Update";
+
                 #endregion Load Data in Edit Mode
             }
             else
@@ -33,9 +32,11 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyAddEdit : System.Web.UI.P
             }
         }
     }
+
     #endregion Load Event
 
     #region LoadControls
+
     private void LoadControls(SqlInt32 WorkPartyID)
     {
         if (Session["UserID"] != null)
@@ -65,6 +66,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyAddEdit : System.Web.UI.P
     #endregion LoadControls
 
     #region Button : Save
+
     protected void btnSave_Click(object sender, EventArgs e)
     {
         #region Server Side Validation
@@ -88,10 +90,11 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyAddEdit : System.Web.UI.P
 
         if (strError.Trim() != String.Empty)
         {
-            lblMessage.Text = "Kindly Correct Following Error(s)<br />" + strError; 
+            lblMessage.Text = "Kindly Correct Following Error(s)<br />" + strError;
         }
 
         #endregion Server Side Validation
+
         if (Session["UserID"] != null)
         {
             JWM_WorkPartyENT entWorkParty = new JWM_WorkPartyENT();
@@ -107,7 +110,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyAddEdit : System.Web.UI.P
 
             if (txtEmail.Text.Trim() != String.Empty)
                 entWorkParty.Email = txtEmail.Text.Trim();
-            
+
             if (txtMobileNo.Text.Trim() != String.Empty)
                 entWorkParty.MobileNo = txtMobileNo.Text.Trim();
 
@@ -139,16 +142,17 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyAddEdit : System.Web.UI.P
             }
 
             #endregion Gather Data
-
         }
     }
+
     #endregion Button : Save
 
     #region Button : Cancel
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-
     }
+
     #endregion Button : Cancel
 
     #region ClearControls

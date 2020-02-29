@@ -1,17 +1,15 @@
 ﻿using JobWorkManagement;
 using JobWorkManagement.BAL;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveList : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["UserID"] == null)
@@ -24,14 +22,15 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveList : System.W
             FillDropDownList();
         }
     }
+
     #endregion Load Event
 
     #region FillGameCategoryGridView
+
     private void FillPaymentReceiveGridView()
     {
         if (Session["UserID"] != null)
         {
-
             JWM_PaymentReceiveBAL balPaymentReceive = new JWM_PaymentReceiveBAL();
             DataTable dtPaymentReceive = balPaymentReceive.SelectAll();
             if (dtPaymentReceive != null && dtPaymentReceive.Rows.Count > 0)
@@ -46,9 +45,11 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveList : System.W
             }
         }
     }
+
     #endregion FillGameCategoryGridView
 
     #region GvPaymentReceive_RowCommand
+
     protected void GvPaymentReceive_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "DeleteRecord" && e.CommandArgument != null)
@@ -64,23 +65,29 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveList : System.W
             }
         }
     }
+
     #endregion GvPaymentReceive_RowCommand
 
     #region FillDropDownList
+
     private void FillDropDownList()
     {
         CommanFillMethods.FillDropDownListWorkPartyID(ddlWorkParty);
     }
+
     #endregion FillDropDownList
 
     #region Search
+
     protected void btnShow_Click(object sender, EventArgs e)
     {
         search();
     }
+
     #endregion Search
 
     #region FillGridViewOnSearch
+
     private void search()
     {
         SqlInt32 WorkPartyID = SqlInt32.Null;
@@ -111,16 +118,18 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveList : System.W
             gvPaymentReceiveList.DataBind();
             lblRecord.Text = "No Record Found";
         }
-
     }
+
     #endregion FillGridViewOnSearch
 
     #region Button : Clear
+
     protected void btnClear_Click(object sender, EventArgs e)
     {
         ddlWorkParty.SelectedValue = "-1";
         txtfromdate.Text = "";
         txttodate.Text = "";
     }
+
     #endregion Button : Clear
 }

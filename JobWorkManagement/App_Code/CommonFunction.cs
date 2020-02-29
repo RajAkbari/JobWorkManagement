@@ -8,6 +8,7 @@ namespace JobWorkManagement
     public class CommonFunction
     {
         #region Status IsComplete
+
         public static string GetStatusLabelCss(bool Status)
         {
             string cssclass = string.Empty;
@@ -35,6 +36,7 @@ namespace JobWorkManagement
 
             return txt;
         }
-        #endregion StatusComplete
+
+        #endregion Status IsComplete
     }
 }

@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// Summary description for JWM_WorkPartyDAL
 /// </summary>
 namespace JobWorkManagement.DAL
 {
-    public class JWM_WorkPartyDAL:JWM_WorkPartyDALBase
+    public class JWM_WorkPartyDAL : JWM_WorkPartyDALBase
     {
         #region Search
+
         public DataTable SelectDuplicate(SqlString WorkPartyName)
         {
             using (SqlConnection objConn = new SqlConnection(ConnectionString))
@@ -24,6 +22,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_Search";
                         objCmd.Parameters.AddWithValue("@WorkPartyName", WorkPartyName);
@@ -31,6 +30,7 @@ namespace JobWorkManagement.DAL
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {
@@ -39,7 +39,6 @@ namespace JobWorkManagement.DAL
                         return dt;
 
                         #endregion ReadData and Set Controls
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -56,11 +55,10 @@ namespace JobWorkManagement.DAL
                         if (objConn.State == ConnectionState.Open)
                             objConn.Close();
                     }
-
-
                 }
             }
         }
+
         #endregion Search
     }
 }

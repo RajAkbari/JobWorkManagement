@@ -13,7 +13,6 @@
                 <div class="card-header py-3">
                     <p class="text-primary m-0 text-xl-center font-weight-bold"><i class="fas fa-exclamation-circle sidebar-brand-text mx-1"></i><span>Work Party Info</span></p>
                 </div>
-
             </div>
             <div class="shadow-lg card">
                 <div class="card bg-light">
@@ -64,13 +63,13 @@
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Estimated Delivery Date &nbsp; : &nbsp;
                                 <asp:Label ID="lblEstimatedDeliveryDate" runat="server" Text='<%# string.Concat(" : ",Eval("EstimatedDeliveryDate","{0:dd-MM-yyyy}")) %>'></asp:Label>
                                     </label>
-                                </div> 
+                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Rate(per Quantity) &nbsp; : &nbsp;
                                 <asp:Label ID="lblRate" runat="server" Text='<%# string.Concat(" : ",Eval("Rate")) %>'></asp:Label>
                                     </label>
-                                </div> 
+                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Total Amount &nbsp; : &nbsp;
@@ -86,7 +85,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Creation Date &nbsp; : &nbsp;
-                                <asp:Label ID="lblCreationDate" runat="server"  Text='<%# string.Concat(" : ",Eval("CreationDate")) %>'></asp:Label>
+                                <asp:Label ID="lblCreationDate" runat="server" Text='<%# string.Concat(" : ",Eval("CreationDate")) %>'></asp:Label>
                                     </label>
                                 </div>
                                 <div class="form-group row">
@@ -99,11 +98,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

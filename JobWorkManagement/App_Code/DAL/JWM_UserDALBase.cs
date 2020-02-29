@@ -1,22 +1,20 @@
 ﻿using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// Summary description for JWM_UserDALBase
 /// </summary>
 namespace JobWorkManagement.DAL
 {
-    public abstract class JWM_UserDALBase:DatabaseConfig
+    public abstract class JWM_UserDALBase : DatabaseConfig
     {
         #region Local Variables
 
         private string _Message;
+
         public string Message
         {
             get
@@ -43,6 +41,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_User_Insert";
                         objCmd.Parameters.AddWithValue("@UserName", entUser.UserName);
@@ -54,12 +53,12 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@IsActive", entUser.IsActive);
                         objCmd.Parameters.AddWithValue("@CreationDate", entUser.CreationDate);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entUser.ModifiedDate);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -94,6 +93,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_User_UpdateByPK";
                         objCmd.Parameters.AddWithValue("@UserID", entUser.UserID);
@@ -106,12 +106,12 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@IsActive", entUser.IsActive);
                         objCmd.Parameters.AddWithValue("@CreationDate", entUser.CreationDate);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entUser.ModifiedDate);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -146,15 +146,16 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_User_Delete";
                         objCmd.Parameters.AddWithValue("@UserID", UserID);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {

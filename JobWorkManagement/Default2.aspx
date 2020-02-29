@@ -41,27 +41,28 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+        <div>
 
-    <table width="300px" border="1" style="border-collapse:collapse;background-color:#E8DCFF">
-    <tr>
-        <td>Butter</td>
-        <td> <asp:TextBox runat="server" ID="TextBox1"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Cheese</td>
-        <td>
-    <asp:TextBox runat="server" ID="TextBox2"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td>Total</td>
-        <td>
-    <asp:TextBox runat="server" ID="TextBox3"></asp:TextBox>
-        </td>
-    </tr>
-    </table>
-    </div>
+            <table width="300px" border="1" style="border-collapse: collapse; background-color: #E8DCFF">
+                <tr>
+                    <td>Butter</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="TextBox1"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Cheese</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="TextBox2"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="TextBox3"></asp:TextBox>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </form>
 </body>
 </html>

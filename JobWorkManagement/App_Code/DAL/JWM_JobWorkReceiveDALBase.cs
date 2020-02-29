@@ -1,22 +1,20 @@
 ﻿using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// Summary description for JWM_WorkReceiveDALBase
 /// </summary>
 namespace JobWorkManagement.DAL
 {
-    public abstract class JWM_JobWorkReceiveDALBase:DatabaseConfig
+    public abstract class JWM_JobWorkReceiveDALBase : DatabaseConfig
     {
         #region Local Variables
 
         protected string _Message;
+
         public string Message
         {
             get
@@ -43,6 +41,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkReceive_Insert";
                         objCmd.Parameters.AddWithValue("@JobWorkReceiveDate", entJobWorkReceive.JobWorkReceiveDate);
@@ -59,12 +58,12 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@UserID", entJobWorkReceive.UserID);
                         objCmd.Parameters.AddWithValue("@CreationDate", entJobWorkReceive.CreationDate);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entJobWorkReceive.ModifiedDate);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -99,6 +98,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkReceive_UpdateByPK";
                         objCmd.Parameters.AddWithValue("@JobWorkReceiveID", entJobWorkReceive.JobWorkReceiveID);
@@ -116,13 +116,11 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@UserID", entJobWorkReceive.UserID);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entJobWorkReceive.ModifiedDate);
 
-
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -157,15 +155,16 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkReceive_DeleteByPK";
                         objCmd.Parameters.AddWithValue("@JobWorkReceiveID", JobWorkReceiveID);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -200,11 +199,14 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkReceive_SelectAll";
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {
@@ -243,12 +245,15 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkReceive_SelectByPK";
                         objCmd.Parameters.AddWithValue("@JobWorkReceiveID", JobWorkReceiveID);
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         JWM_JobWorkReceiveENT entJobWorkReceive = new JWM_JobWorkReceiveENT();
 
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
@@ -346,12 +351,15 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkReceive_SelectView";
                         objCmd.Parameters.AddWithValue("@JobWorkReceiveID", JobWorkReceiveID);
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {
@@ -390,12 +398,15 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_JobWorkComplete_DropDownListByWorkPartyID";
                         objCmd.Parameters.AddWithValue("@WorkPartyID", WorkPartyID);
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {

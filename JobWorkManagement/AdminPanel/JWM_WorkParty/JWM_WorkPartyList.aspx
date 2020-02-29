@@ -27,13 +27,13 @@
                     </div>
                     <div class="col-sm-4"></div>
                     <div class="col-sm-2">
-                        <asp:Button runat="server" ID="btnShow" Text="show" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnShow_Click"  />
+                        <asp:Button runat="server" ID="btnShow" Text="show" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnShow_Click" />
                         <asp:Button runat="server" ID="btnClear" Text="Clear" CssClass="btn btn-danger btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnClear_Click" />
                     </div>
                 </div>
             </div>
         </div>
-         &nbsp;
+        &nbsp;
 
         <div class="card shadow">
             <div class="card-header py-3">
@@ -68,8 +68,6 @@
             </div>
         </div>
     </div>
-
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

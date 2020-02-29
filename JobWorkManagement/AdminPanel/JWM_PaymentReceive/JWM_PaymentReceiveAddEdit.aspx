@@ -19,7 +19,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Party:</label>
-                                <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass="form-control" ></asp:DropDownList>
+                                <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass="form-control"></asp:DropDownList>
                                 <asp:RequiredFieldValidator runat="server" ID="rfvddlWorkParty" ControlToValidate="ddlWorkParty" InitialValue="-1" ErrorMessage="Select Work Party" ForeColor="Red" SetFocusOnError="True" Display="Dynamic" />
                             </div>
                         </div>
@@ -54,4 +54,3 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

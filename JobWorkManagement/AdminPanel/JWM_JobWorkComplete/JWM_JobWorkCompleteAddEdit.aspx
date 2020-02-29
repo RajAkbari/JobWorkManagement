@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" runat="Server">
 
-        <div class="container-fluid">
+    <div class="container-fluid">
         <asp:Label ID="lblMessage" runat="server"></asp:Label>
         <div class="col-lg-12">
             <div class="card shadow mb-4">
@@ -35,14 +35,14 @@
                             <div class="form-group">
                                 <label>Complete Date:</label>
                                 <asp:TextBox type="text" ID="txtWorkCompletedDate" runat="server" class="form-control" TextMode="Date" placeholder="Enter Work Complete Date"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvWorkCompleteDate" runat="server" ControlToValidate="txtWorkCompletedDate" ErrorMessage="Enter Work Complete Date" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvWorkCompleteDate" runat="server" ControlToValidate="txtWorkCompletedDate" ErrorMessage="Enter Work Complete Date" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Quantity Complete:</label>
                                 <asp:TextBox type="text" ID="txtQuantityComplete" runat="server" class="form-control" placeholder="Enter Quantity Done"></asp:TextBox>
-                                 <asp:RequiredFieldValidator ID="rfvQuantityComplete" runat="server" ControlToValidate="txtQuantityComplete" ErrorMessage="Enter Quantity Complete" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvQuantityComplete" runat="server" ControlToValidate="txtQuantityComplete" ErrorMessage="Enter Quantity Complete" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
@@ -61,4 +61,3 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

@@ -6,7 +6,7 @@
 (function ($) {
     "use strict";
 
-     $.fn.select2.locales['az'] = {
+    $.fn.select2.locales['az'] = {
         formatMatches: function (matches) { return matches + " nəticə mövcuddur, hərəkət etdirmək üçün yuxarı və aşağı düymələrindən istifadə edin."; },
         formatNoMatches: function () { return "Nəticə tapılmadı"; },
         formatInputTooShort: function (input, min) { var n = min - input.length; return n + " simvol daxil edin"; },

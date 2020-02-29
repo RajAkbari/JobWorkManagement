@@ -1,15 +1,11 @@
 ﻿using JobWorkManagement.BAL;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_WorkParty_JWM_WorkPartyDetails : System.Web.UI.Page
 {
     #region Page Load
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -20,9 +16,11 @@ public partial class AdminPanel_JWM_WorkParty_JWM_WorkPartyDetails : System.Web.
             }
         }
     }
+
     #endregion Page Load
 
     #region FillControls
+
     private void FillControls()
     {
         if (Request.QueryString["WorkPartyID"] != null)
@@ -33,7 +31,6 @@ public partial class AdminPanel_JWM_WorkParty_JWM_WorkPartyDetails : System.Web.
             {
                 foreach (DataRow dr in dtJWM_WorkParty.Rows)
                 {
-
                     if (!dr["WorkPartyID"].Equals(DBNull.Value))
                         lblWorkPartyID.Text = Convert.ToString(dr["WorkPartyID"]);
 
@@ -54,12 +51,10 @@ public partial class AdminPanel_JWM_WorkParty_JWM_WorkPartyDetails : System.Web.
 
                     if (!dr["ModifiedDate"].Equals(DBNull.Value))
                         lblModifiedDate.Text = Convert.ToString(dr["ModifiedDate"]);
-
-
                 }
             }
         }
     }
-    #endregion FillControls
 
+    #endregion FillControls
 }

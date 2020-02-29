@@ -1,22 +1,20 @@
-﻿    using JobWorkManagement.ENT;
+﻿using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// Summary description for JWM_WorkPartyDALBase
 /// </summary>
 namespace JobWorkManagement.DAL
 {
-    public abstract class JWM_WorkPartyDALBase:DatabaseConfig
+    public abstract class JWM_WorkPartyDALBase : DatabaseConfig
     {
         #region Local Variables
 
         protected string _Message;
+
         public string Message
         {
             get
@@ -43,6 +41,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_Insert";
                         objCmd.Parameters.AddWithValue("@WorkPartyName", entWorkParty.WorkPartyName);
@@ -53,12 +52,12 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@UserID", entWorkParty.UserID);
                         objCmd.Parameters.AddWithValue("@CreationDate", entWorkParty.CreationDate);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entWorkParty.ModifiedDate);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -93,6 +92,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_UpdateByPK";
                         objCmd.Parameters.AddWithValue("@WorkPartyID", entWorkParty.WorkPartyID);
@@ -103,12 +103,12 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@Remarks", entWorkParty.Remarks);
                         objCmd.Parameters.AddWithValue("@UserID", entWorkParty.UserID);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entWorkParty.ModifiedDate);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -143,15 +143,16 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_DeleteByPK";
                         objCmd.Parameters.AddWithValue("@WorkPartyID", WorkPartyID);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -186,11 +187,14 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_SelectAll";
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {
@@ -229,12 +233,15 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_SelectByPk";
                         objCmd.Parameters.AddWithValue("@WorkPartyID", WorkPartyID);
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         JWM_WorkPartyENT entWorkParty = new JWM_WorkPartyENT();
 
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
@@ -256,7 +263,8 @@ namespace JobWorkManagement.DAL
                                 if (!objSDR["Email"].Equals(DBNull.Value))
                                 {
                                     entWorkParty.Email = Convert.ToString(objSDR["Email"]);
-                                }if (!objSDR["MobileNo"].Equals(DBNull.Value))
+                                }
+                                if (!objSDR["MobileNo"].Equals(DBNull.Value))
                                 {
                                     entWorkParty.MobileNo = Convert.ToString(objSDR["MobileNo"]);
                                 }
@@ -307,12 +315,15 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_SelectView";
                         objCmd.Parameters.AddWithValue("@WorkPartyID", WorkPartyID);
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {
@@ -351,11 +362,14 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_WorkParty_SelectByDropDownList";
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {

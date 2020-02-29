@@ -1,22 +1,20 @@
 ﻿using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// Summary description for JWM_PaymentReceiveDALBase
 /// </summary>
 namespace JobWorkManagement.DAL
 {
-    public abstract class JWM_PaymentReceiveDALBase:DatabaseConfig
+    public abstract class JWM_PaymentReceiveDALBase : DatabaseConfig
     {
         #region Local Variables
 
         protected string _Message;
+
         public string Message
         {
             get
@@ -43,6 +41,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_PaymentReceive_Insert";
                         objCmd.Parameters.AddWithValue("@WorkPartyID", entPaymentReceive.WorkPartyID);
@@ -52,12 +51,12 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@UserID", entPaymentReceive.UserID);
                         objCmd.Parameters.AddWithValue("@CreationDate", entPaymentReceive.CreationDate);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entPaymentReceive.ModifiedDate);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -92,6 +91,7 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_PaymentReceive_UpdateByPK";
                         objCmd.Parameters.AddWithValue("@PaymentReceiveID", entPaymentReceive.PaymentReceiveID);
@@ -102,13 +102,11 @@ namespace JobWorkManagement.DAL
                         objCmd.Parameters.AddWithValue("@UserID", entPaymentReceive.UserID);
                         objCmd.Parameters.AddWithValue("@ModifiedDate", entPaymentReceive.ModifiedDate);
 
-
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -143,15 +141,16 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_PaymentReceive_DeleteByPK";
                         objCmd.Parameters.AddWithValue("@PaymentReceiveID", PaymentReceiveID);
+
                         #endregion Prepare Command
 
                         objCmd.ExecuteNonQuery();
 
                         return true;
-
                     }
                     catch (SqlException sqlex)
                     {
@@ -186,11 +185,14 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_PaymentReceive_SelectAll";
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {
@@ -229,12 +231,15 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_PaymentReceive_SelectByPK";
                         objCmd.Parameters.AddWithValue("@PaymentReceiveID", PaymentReceiveID);
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         JWM_PaymentReceiveENT entPaymentReceive = new JWM_PaymentReceiveENT();
 
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
@@ -304,12 +309,15 @@ namespace JobWorkManagement.DAL
                     try
                     {
                         #region Prepare Command
+
                         objCmd.CommandType = CommandType.StoredProcedure;
                         objCmd.CommandText = "PR_JWM_PaymentReceive_SelectView";
                         objCmd.Parameters.AddWithValue("@PaymentReceiveID", PaymentReceiveID);
+
                         #endregion Prepare Command
 
                         #region ReadData and Set Controls
+
                         DataTable dt = new DataTable();
                         using (SqlDataReader objSDR = objCmd.ExecuteReader())
                         {
@@ -337,6 +345,7 @@ namespace JobWorkManagement.DAL
                 }
             }
         }
+
         #endregion Select Operations
     }
 }

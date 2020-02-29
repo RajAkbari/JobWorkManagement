@@ -1,16 +1,13 @@
 ﻿using JobWorkManagement.BAL;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class LogIn_LogIn : System.Web.UI.Page
 {
     #region Page Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         txtUserName.Focus();
@@ -20,15 +17,17 @@ public partial class LogIn_LogIn : System.Web.UI.Page
             this.Page.Title = "Login - Job Work Management";
         }
     }
+
     #endregion Page Load Event
 
-
     #region Login Button Click Event
+
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         String ErrorMsg = String.Empty;
 
         #region Validate Controls
+
         if (txtUserName.Text.Trim() == String.Empty)
             ErrorMsg += "Username is required<br>";
 
@@ -41,10 +40,10 @@ public partial class LogIn_LogIn : System.Web.UI.Page
             lblMessage.ForeColor = Color.Red;
             return;
         }
+
         #endregion Validate Controls
 
         #region Store Data in Session
-
 
         JWM_UserBAL balUser = new JWM_UserBAL();
         DataTable dtUserBAL = balUser.SelectByUserNameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.ToString());
@@ -76,8 +75,8 @@ public partial class LogIn_LogIn : System.Web.UI.Page
 
         #endregion Store Data in Session
     }
-    #endregion Login Button Click Event
 
+    #endregion Login Button Click Event
 
     //#region Login Button Click Event
 

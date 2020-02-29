@@ -13,7 +13,6 @@
                 <div class="card-header py-3">
                     <p class="text-primary m-0 text-xl-center font-weight-bold"><i class="fas fa-exclamation-circle sidebar-brand-text mx-1"></i><span>Work Party Info</span></p>
                 </div>
-
             </div>
             <div class="shadow-lg card">
                 <div class="card bg-light">
@@ -25,7 +24,7 @@
                             <div class="col-md-12">
                                 <div class="form-group row">
                                     <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium" ></i>Work Party ID &nbsp; : &nbsp;
+                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Work Party ID &nbsp; : &nbsp;
                                         <asp:Label ID="lblWorkPartyID" runat="server" Text='<%# string.Concat(" : ",Eval("WorkPartyID")) %>'></asp:Label>
                                     </label>
                                 </div>
@@ -44,13 +43,13 @@
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Mobile No. &nbsp; : &nbsp;
-                                <asp:Label ID="lblMobile" runat="server" Text='<%# string.Concat(" : ",Eval("MobileNo")) %>' ></asp:Label>
+                                <asp:Label ID="lblMobile" runat="server" Text='<%# string.Concat(" : ",Eval("MobileNo")) %>'></asp:Label>
                                     </label>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-6">
                                         <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Email &nbsp; : &nbsp;
-                                <asp:Label ID="lblEmail" runat="server" Text='<%# string.Concat(" : ",Eval("Email")) %>' ></asp:Label>
+                                <asp:Label ID="lblEmail" runat="server" Text='<%# string.Concat(" : ",Eval("Email")) %>'></asp:Label>
                                     </label>
                                 </div>
                                 <div class="form-group row">
@@ -69,11 +68,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

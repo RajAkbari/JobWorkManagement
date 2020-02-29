@@ -2,16 +2,13 @@
 using JobWorkManagement.BAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveAddEdit : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -24,9 +21,11 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveAddEdit : Syste
             if (Request.QueryString["PaymentReceiveID"] != null)
             {
                 #region Load Data in Edit Mode
+
                 LoadControls(Convert.ToInt32(Request.QueryString["PaymentReceiveID"]));
                 lblPageHeader.Text = "Edit Payment Receive";
                 btnSave.Text = "Update";
+
                 #endregion Load Data in Edit Mode
             }
             else
@@ -35,14 +34,15 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveAddEdit : Syste
             }
         }
     }
+
     #endregion Load Event
 
     #region LoadControls
+
     private void LoadControls(SqlInt32 PaymentReceiveID)
     {
         if (Session["UserID"] != null)
         {
-
             JWM_PaymentReceiveENT entPaymentReceive = new JWM_PaymentReceiveENT();
             JWM_PaymentReceiveBAL balPaymentReceive = new JWM_PaymentReceiveBAL();
 
@@ -65,6 +65,7 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveAddEdit : Syste
     #endregion LoadControls
 
     #region Button : Save
+
     protected void btnSave_Click(object sender, EventArgs e)
     {
         #region Server Side Validation
@@ -89,6 +90,7 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveAddEdit : Syste
         }
 
         #endregion Server Side Validation
+
         if (Session["UserID"] != null)
         {
             JWM_PaymentReceiveENT entPaymentReceive = new JWM_PaymentReceiveENT();
@@ -134,13 +136,15 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveAddEdit : Syste
             #endregion Gather Data
         }
     }
+
     #endregion Button : Save
 
     #region Button : Cancel
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-
     }
+
     #endregion Button : Cancel
 
     #region FillDropDownList

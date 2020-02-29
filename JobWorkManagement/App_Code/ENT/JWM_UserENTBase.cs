@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
+﻿using System.Data.SqlTypes;
 
 /// <summary>
 /// Summary description for JWM_UserENTBase
@@ -12,7 +8,9 @@ namespace JobWorkManagement.ENT
     public abstract class JWM_UserENTBase
     {
         #region Properties
+
         protected SqlInt32 _UserID;
+
         public SqlInt32 UserID
         {
             get
@@ -26,6 +24,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _UserName;
+
         public SqlString UserName
         {
             get
@@ -39,6 +38,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _Password;
+
         public SqlString Password
         {
             get
@@ -52,6 +52,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _DisplayName;
+
         public SqlString DisplayName
         {
             get
@@ -63,8 +64,9 @@ namespace JobWorkManagement.ENT
                 _DisplayName = value;
             }
         }
-        
+
         protected SqlString _Email;
+
         public SqlString Email
         {
             get
@@ -76,8 +78,9 @@ namespace JobWorkManagement.ENT
                 _Email = value;
             }
         }
-        
+
         protected SqlString _MobileNo;
+
         public SqlString MobileNo
         {
             get
@@ -91,6 +94,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _Remarks;
+
         public SqlString Remarks
         {
             get
@@ -104,6 +108,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlBoolean _IsActive;
+
         public SqlBoolean IsActive
         {
             get
@@ -117,6 +122,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _CreationDate;
+
         public SqlDateTime CreationDate
         {
             get
@@ -130,6 +136,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _ModifiedDate;
+
         public SqlDateTime ModifiedDate
         {
             get
@@ -141,6 +148,7 @@ namespace JobWorkManagement.ENT
                 _ModifiedDate = value;
             }
         }
+
         #endregion Properties
     }
 }

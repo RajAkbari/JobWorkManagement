@@ -1,16 +1,13 @@
 ﻿using JobWorkManagement.BAL;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_JobType_JobTypeList : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["UserID"] == null)
@@ -23,14 +20,15 @@ public partial class AdminPanel_JWM_JobType_JobTypeList : System.Web.UI.Page
             //FillControls();
         }
     }
+
     #endregion Load Event
 
     #region FillGameCategoryGridView
+
     private void FillJobTypeGridView()
     {
         if (Session["UserID"] != null)
         {
-
             JWM_JobTypeBAL balJobType = new JWM_JobTypeBAL();
             DataTable dtJobType = balJobType.SelectAll();
             if (dtJobType != null && dtJobType.Rows.Count > 0)
@@ -45,9 +43,11 @@ public partial class AdminPanel_JWM_JobType_JobTypeList : System.Web.UI.Page
             }
         }
     }
+
     #endregion FillGameCategoryGridView
 
     #region GvJobType_RowCommand
+
     protected void GvJobType_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "DeleteRecord" && e.CommandArgument != null)
@@ -63,5 +63,6 @@ public partial class AdminPanel_JWM_JobType_JobTypeList : System.Web.UI.Page
             }
         }
     }
+
     #endregion GvJobType_RowCommand
 }

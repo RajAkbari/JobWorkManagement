@@ -1,10 +1,7 @@
 ﻿using JobWorkManagement.DAL;
 using JobWorkManagement.ENT;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// Summary description for JWM_UserBALBase
@@ -14,6 +11,7 @@ namespace JobWorkManagement.BAL
     public abstract class JWM_UserBALBase
     {
         #region Local Variables
+
         protected string _Message;
 
         public string Message
@@ -81,6 +79,7 @@ namespace JobWorkManagement.BAL
                 return false;
             }
         }
+
         #endregion DeleteOperation
     }
 }

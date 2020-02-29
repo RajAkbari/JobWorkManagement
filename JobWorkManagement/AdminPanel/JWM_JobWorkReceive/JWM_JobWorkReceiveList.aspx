@@ -54,7 +54,7 @@
         </div>
 
         &nbsp;
-        
+
         <div class="card shadow">
             <div class="card-header py-3">
                 <p class="text-primary m-0 font-weight-bold">
@@ -64,8 +64,8 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                    <table class="table dataTable my-0" >
-                        <asp:GridView ID="gvJobWorkReceiveList" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered text-nowrap"   OnRowCommand="GvJobWorkReceive_RowCommand">
+                    <table class="table dataTable my-0">
+                        <asp:GridView ID="gvJobWorkReceiveList" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered text-nowrap" OnRowCommand="GvJobWorkReceive_RowCommand">
                             <Columns>
                                 <asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-nowrap text-center" ItemStyle-Width="15%">
                                     <ItemTemplate>
@@ -73,20 +73,20 @@
                                         <asp:LinkButton ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-danger btn-sm d-sm-inline-block" CommandName="DeleteRecord" CommandArgument='<%# Eval("JobWorkReceiveID") %>'><i class="far fa-trash-alt"></i></asp:LinkButton>
                                         <asp:HyperLink ID="hlView" runat="server" Text="Details" CssClass="btn btn-secondary btn-sm d-sm-inline-block" NavigateUrl='<%# String.Concat("JWM_JobWorkReceiveDetails.aspx?","JobWorkReceiveID=",Eval("JobWorkReceiveID")) %>'><i class="far fa-eye"></i></asp:HyperLink>
                                     </ItemTemplate>
-                                </asp:TemplateField >
+                                </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Status" ItemStyle-Font-Bold="true" HeaderStyle-CssClass="text-nowrap text-center" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                         <asp:Label ID="lblIsActive" CssClass='<%# JobWorkManagement.CommonFunction.GetStatusLabelCss(Convert.ToBoolean(Eval("IsActive")))%>' Text='<%# JobWorkManagement.CommonFunction.GetStatusLabelCompletePanding(Convert.ToBoolean(Eval("IsActive")))%>' runat="server"></asp:Label>
+                                        <asp:Label ID="lblIsActive" CssClass='<%# JobWorkManagement.CommonFunction.GetStatusLabelCss(Convert.ToBoolean(Eval("IsActive")))%>' Text='<%# JobWorkManagement.CommonFunction.GetStatusLabelCompletePanding(Convert.ToBoolean(Eval("IsActive")))%>' runat="server"></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="SrNo" HeaderText="Sr." />
                                 <asp:BoundField DataField="JobTypeName" HeaderText="Job Type" />
                                 <asp:BoundField DataField="WorkPartyName" HeaderText="Party" ItemStyle-Width="15%" />
-                                <asp:BoundField DataField="QuantityReceived" HeaderText="Qty Received" Visible="false"  />
+                                <asp:BoundField DataField="QuantityReceived" HeaderText="Qty Received" Visible="false" />
                                 <asp:BoundField DataField="QuantityDamaged" HeaderText="Qty Damaged" Visible="false" />
-                                <asp:BoundField DataField="QuantityActual" HeaderText="Qty<br/>Actual" HtmlEncode="false"  ItemStyle-ForeColor="DarkBlue" />
-                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty<br/>Complete" HtmlEncode="false" ItemStyle-ForeColor="Green" />
-                                <asp:BoundField DataField="QuantityPanding" HeaderText="Qty<br/>Panding" HtmlEncode="false" ItemStyle-ForeColor="red"  />
+                                <asp:BoundField DataField="QuantityActual" HeaderText="Qty<br />Actual" HtmlEncode="false" ItemStyle-ForeColor="DarkBlue" />
+                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty<br />Complete" HtmlEncode="false" ItemStyle-ForeColor="Green" />
+                                <asp:BoundField DataField="QuantityPanding" HeaderText="Qty<br />Panding" HtmlEncode="false" ItemStyle-ForeColor="red" />
                                 <asp:BoundField DataField="JobWorkReceiveDate" HeaderText="Receive Date" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-Width="15%" />
                                 <asp:BoundField DataField="EstimatedDeliveryDate" HeaderText="Estimated Date" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-Width="15%" />
                                 <asp:BoundField DataField="Rate" HeaderText="Rate" />
@@ -97,9 +97,7 @@
                 </div>
             </div>
         </div>
-
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

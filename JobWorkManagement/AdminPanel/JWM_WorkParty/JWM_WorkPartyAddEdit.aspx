@@ -32,50 +32,49 @@
                                 <div class="input-group">
                                     <div class="input-group-text"><i class="glyphicon glyphicon-phone"></i></div>
                                     <asp:TextBox type="text" ID="txtMobileNo" runat="server" MaxLength="10" class="form-control" placeholder="Enter Mobile number"></asp:TextBox>
-                                    </div>
-                                    <asp:RequiredFieldValidator ID="rfvMobileNo" runat="server" ControlToValidate="txtMobileNo" ErrorMessage="Enter Mobile Number" pattern="[0-9]{10}" ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
-                                
-                                    <asp:RegularExpressionValidator ID="rgvMobileNo" runat="server" ControlToValidate="txtMobileNo" ErrorMessage="Enter Valid Mobile Number" ValidationExpression="[0-9]{10}" ForeColor="Red" Display="None"></asp:RegularExpressionValidator>
                                 </div>
+                                <asp:RequiredFieldValidator ID="rfvMobileNo" runat="server" ControlToValidate="txtMobileNo" ErrorMessage="Enter Mobile Number" pattern="[0-9]{10}" ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
+
+                                <asp:RegularExpressionValidator ID="rgvMobileNo" runat="server" ControlToValidate="txtMobileNo" ErrorMessage="Enter Valid Mobile Number" ValidationExpression="[0-9]{10}" ForeColor="Red" Display="None"></asp:RegularExpressionValidator>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Email:</label>
-                                    
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Email:</label>
+
                                 <div class="input-group">
                                     <div class="input-group-text"><i class="glyphicon glyphicon-envelope"></i></div>
                                     <asp:TextBox type="text" ID="txtEmail" runat="server" class="form-control" placeholder="Enter Email"></asp:TextBox>
-                                    </div>
-                                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Email" ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
-                                 
-                                    <asp:RegularExpressionValidator ID="rgvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Valid Email" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" ForeColor="Red" Display="None"></asp:RegularExpressionValidator>
                                 </div>
+                                <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Email" ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
+
+                                <asp:RegularExpressionValidator ID="rgvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Valid Email" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" ForeColor="Red" Display="None"></asp:RegularExpressionValidator>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Address :</label>
-                                    <asp:TextBox type="text" ID="txtAddress" TextMode="MultiLine" Rows="3" runat="server" class="form-control" placeholder="Enter Address"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ControlToValidate="txtAddress" ErrorMessage="Enter Address" ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Remarks :</label>
-                                    <asp:TextBox type="text" ID="txtRemarks" TextMode="MultiLine" Rows="3" runat="server" class="form-control" placeholder="Enter Remarks"></asp:TextBox>
-                                </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Address :</label>
+                                <asp:TextBox type="text" ID="txtAddress" TextMode="MultiLine" Rows="3" runat="server" class="form-control" placeholder="Enter Address"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ControlToValidate="txtAddress" ErrorMessage="Enter Address" ForeColor="Red" SetFocusOnError="True" Display="None"></asp:RequiredFieldValidator>
                             </div>
                         </div>
-                        <div class="btn fa-pull-right">
-                            <asp:Button runat="server" ID="btnSave" type="Submit" class="btn btn-primary btn-sm d-sm-inline-block" Text="Save" OnClick="btnSave_Click" />
-                            <asp:HyperLink ID="hlCancel" runat="server" NavigateUrl="~/AdminPanel/JWM_WorkParty/JWM_WorkPartyList.aspx" type="reset" class="btn btn-secondary btn-sm d-sm-inline-block">Cancel</asp:HyperLink>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Remarks :</label>
+                                <asp:TextBox type="text" ID="txtRemarks" TextMode="MultiLine" Rows="3" runat="server" class="form-control" placeholder="Enter Remarks"></asp:TextBox>
+                            </div>
                         </div>
+                    </div>
+                    <div class="btn fa-pull-right">
+                        <asp:Button runat="server" ID="btnSave" type="Submit" class="btn btn-primary btn-sm d-sm-inline-block" Text="Save" OnClick="btnSave_Click" />
+                        <asp:HyperLink ID="hlCancel" runat="server" NavigateUrl="~/AdminPanel/JWM_WorkParty/JWM_WorkPartyList.aspx" type="reset" class="btn btn-secondary btn-sm d-sm-inline-block">Cancel</asp:HyperLink>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>
-

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
+﻿using System.Data.SqlTypes;
 
 /// <summary>
 /// Summary description for JWM_PaymentReceiveENTBase
@@ -12,7 +8,9 @@ namespace JobWorkManagement.ENT
     public abstract class JWM_PaymentReceiveENTBase
     {
         #region Properties
+
         protected SqlInt32 _PaymentReceiveID;
+
         public SqlInt32 PaymentReceiveID
         {
             get
@@ -26,6 +24,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _PaymentReceiveDate;
+
         public SqlDateTime PaymentReceiveDate
         {
             get
@@ -39,6 +38,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _WorkPartyID;
+
         public SqlInt32 WorkPartyID
         {
             get
@@ -52,6 +52,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDecimal _Amount;
+
         public SqlDecimal Amount
         {
             get
@@ -65,6 +66,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _UserID;
+
         public SqlInt32 UserID
         {
             get
@@ -78,6 +80,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _Remarks;
+
         public SqlString Remarks
         {
             get
@@ -91,6 +94,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _CreationDate;
+
         public SqlDateTime CreationDate
         {
             get
@@ -104,6 +108,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _ModifiedDate;
+
         public SqlDateTime ModifiedDate
         {
             get
@@ -116,6 +121,6 @@ namespace JobWorkManagement.ENT
             }
         }
 
-#endregion Properties
+        #endregion Properties
     }
 }

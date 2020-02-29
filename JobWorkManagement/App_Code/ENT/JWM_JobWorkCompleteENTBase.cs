@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
+﻿using System.Data.SqlTypes;
 
 /// <summary>
 /// Summary description for JWM_JobWorkCompleteENTBase
@@ -12,7 +8,9 @@ namespace JobWorkManagement.ENT
     public abstract class JWM_JobWorkCompleteENTBase
     {
         #region Properties
+
         protected SqlInt32 _JobWorkCompleteID;
+
         public SqlInt32 JobWorkCompleteID
         {
             get
@@ -26,6 +24,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _JobWorkCompleteDate;
+
         public SqlDateTime JobWorkCompleteDate
         {
             get
@@ -39,6 +38,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _WorkPartyID;
+
         public SqlInt32 WorkPartyID
         {
             get
@@ -52,6 +52,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _JobWorkReceiveID;
+
         public SqlInt32 JobWorkReceiveID
         {
             get
@@ -65,6 +66,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _QuantityCompleted;
+
         public SqlInt32 QuantityCompleted
         {
             get
@@ -78,6 +80,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlInt32 _UserID;
+
         public SqlInt32 UserID
         {
             get
@@ -91,6 +94,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlString _Remarks;
+
         public SqlString Remarks
         {
             get
@@ -104,6 +108,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _CreationDate;
+
         public SqlDateTime CreationDate
         {
             get
@@ -117,6 +122,7 @@ namespace JobWorkManagement.ENT
         }
 
         protected SqlDateTime _ModifiedDate;
+
         public SqlDateTime ModifiedDate
         {
             get
@@ -128,6 +134,7 @@ namespace JobWorkManagement.ENT
                 _ModifiedDate = value;
             }
         }
+
         #endregion Properties
     }
 }

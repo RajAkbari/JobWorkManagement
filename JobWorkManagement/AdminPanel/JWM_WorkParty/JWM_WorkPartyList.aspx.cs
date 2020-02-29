@@ -1,17 +1,14 @@
-﻿using JobWorkManagement;
-using JobWorkManagement.BAL;
+﻿using JobWorkManagement.BAL;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
 {
     #region Load Event
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["UserID"] == null)
@@ -23,6 +20,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
             FillWorkPartyGridView();
         }
     }
+
     #endregion Load Event
 
     #region FillWorkPartyGridView
@@ -49,17 +47,19 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
     #endregion FillWorkPartyGridView
 
     #region Search
+
     protected void btnShow_Click(object sender, EventArgs e)
     {
         search();
     }
+
     #endregion Search
 
     #region FillGridViewOnSearch
+
     private void search()
     {
         SqlString WorkPartyName = SqlString.Null;
-
 
         if (txtWorkParty.Text.Trim() != "")
             WorkPartyName = txtWorkParty.Text.Trim();
@@ -79,8 +79,8 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
             gvWorkPartyList.DataBind();
             lblRecord.Text = "No Record Found";
         }
-
     }
+
     #endregion FillGridViewOnSearch
 
     #region GvWorkParty_RowCommand
@@ -104,10 +104,12 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
     #endregion GvWorkParty_RowCommand
 
     #region Button : Clear
+
     protected void btnClear_Click(object sender, EventArgs e)
     {
         txtWorkParty.Text = "";
         search();
     }
+
     #endregion Button : Clear
 }
