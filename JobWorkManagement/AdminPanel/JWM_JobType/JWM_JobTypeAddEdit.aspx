@@ -31,10 +31,20 @@
                             <asp:Button runat="server" ID="btnSave" type="Submit" class="btn btn-primary btn-sm d-sm-inline-block" Text="Save" OnClick="btnSave_Click" />
                             <asp:HyperLink ID="hlCancel" runat="server" NavigateUrl="~/AdminPanel/JWM_JobType/JWM_JobTypeList.aspx" type="reset" class="btn btn-secondary btn-sm d-sm-inline-block">Cancel</asp:HyperLink>
                         </div>
+                        <asp:RequiredFieldValidator ID="rfvJobTypeName" runat="server" ControlToValidate="txtJobTypeName" ErrorMessage="Enter Job Name" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="form-group">
+                        <label>Remarks :</label>
+                        <asp:TextBox type="text" ID="txtRemarks" TextMode="MultiLine" Rows="3" runat="server" class="form-control" placeholder="Enter Remarks"></asp:TextBox>
+                    </div>
+                    <div class="btn fa-pull-right">
+                        <asp:Button runat="server" ID="btnSave" type="Submit" class="btn btn-primary btn-sm d-sm-inline-block" Text="Save" OnClick="btnSave_Click" />
+                        <asp:HyperLink ID="hlCancel" runat="server" NavigateUrl="~/AdminPanel/JWM_JobType/JWM_JobTypeList.aspx" type="reset" class="btn btn-secondary btn-sm d-sm-inline-block">Cancel</asp:HyperLink>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" runat="Server">
 </asp:Content>

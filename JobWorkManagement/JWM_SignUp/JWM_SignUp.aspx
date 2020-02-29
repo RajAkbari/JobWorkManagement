@@ -52,11 +52,11 @@
                                 <div class="form-group">
                                     <asp:TextBox ID="txtRemarks" runat="server" CssClass="form-control form-control-user" Type="remarks" TextMode="MultiLine" placeholder="remarks"></asp:TextBox>
                                 </div>
-                                <asp:Button runat="server" ID="btnRegister"  Text="Register Account" CssClass="btn btn-primary btn-block text-white btn-user" OnClick="btnRegister_Click"></asp:Button>
+                                <asp:Button runat="server" ID="btnRegister" Text="Register Account" CssClass="btn btn-primary btn-block text-white btn-user" OnClick="btnRegister_Click"></asp:Button>
 
                                 <hr />
 
-<%--                                <div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div>--%>
+                                <%--<div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div>--%>
                                 <div class="text-center"><a class="small" href="../JWM_LogIn/JWM_LogIn.aspx">Already have an account? Login!</a></div>
                             </div>
                         </div>
