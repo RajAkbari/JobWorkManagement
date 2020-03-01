@@ -31,17 +31,8 @@ public partial class AdminPanel_JWM_JobType_JobViewDetails : System.Web.UI.Page
             {
                 foreach (DataRow dr in dtJWM_JobType.Rows)
                 {
-                    if (!dr["JobTypeID"].Equals(DBNull.Value))
-                        lblJobTypeID.Text = Convert.ToString(dr["JobTypeID"]);
-
                     if (!dr["JobTypeName"].Equals(DBNull.Value))
                         lblJobTypeName.Text = Convert.ToString(dr["JobTypeName"]);
-
-                    if (!dr["CreationDate"].Equals(DBNull.Value))
-                        lblCreationDate.Text = Convert.ToString(dr["CreationDate"]);
-
-                    if (!dr["ModifiedDate"].Equals(DBNull.Value))
-                        lblModifiedDate.Text = Convert.ToString(dr["ModifiedDate"]);
                 }
             }
         }

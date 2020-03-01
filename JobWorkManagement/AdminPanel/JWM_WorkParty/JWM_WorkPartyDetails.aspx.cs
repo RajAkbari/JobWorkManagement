@@ -31,9 +31,6 @@ public partial class AdminPanel_JWM_WorkParty_JWM_WorkPartyDetails : System.Web.
             {
                 foreach (DataRow dr in dtJWM_WorkParty.Rows)
                 {
-                    if (!dr["WorkPartyID"].Equals(DBNull.Value))
-                        lblWorkPartyID.Text = Convert.ToString(dr["WorkPartyID"]);
-
                     if (!dr["WorkPartyName"].Equals(DBNull.Value))
                         lblWorkPartyName.Text = Convert.ToString(dr["WorkPartyName"]);
 
@@ -45,12 +42,6 @@ public partial class AdminPanel_JWM_WorkParty_JWM_WorkPartyDetails : System.Web.
 
                     if (!dr["Email"].Equals(DBNull.Value))
                         lblEmail.Text = Convert.ToString(dr["Email"]);
-
-                    if (!dr["CreationDate"].Equals(DBNull.Value))
-                        lblCreationDate.Text = Convert.ToString(dr["CreationDate"]);
-
-                    if (!dr["ModifiedDate"].Equals(DBNull.Value))
-                        lblModifiedDate.Text = Convert.ToString(dr["ModifiedDate"]);
                 }
             }
         }

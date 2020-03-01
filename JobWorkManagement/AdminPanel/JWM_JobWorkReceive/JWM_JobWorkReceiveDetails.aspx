@@ -14,88 +14,75 @@
                     <p class="text-primary m-0 text-xl-center font-weight-bold"><i class="fas fa-exclamation-circle sidebar-brand-text mx-1"></i><span>Work Party Info</span></p>
                 </div>
             </div>
-            <div class="shadow-lg card">
-                <div class="card bg-light">
-                    <div class="card-body text-left text-dark">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <asp:Label ID="lblMessage" runat="server" CssClass="badge badge-success"></asp:Label>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Job Work Receive ID &nbsp; : &nbsp;
-                                        <asp:Label ID="lblJobWorkReceive" runat="server" Text='<%# string.Concat(" : ",Eval("JobWorkReceiveID")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Job Type Name &nbsp; : &nbsp;
-                                        <asp:Label ID="lblJobTypeName" runat="server" Text='<%# string.Concat(" : ",Eval("JobTypeName")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Work Party Name &nbsp; : &nbsp;
-                                <asp:Label ID="lblWorkPartyName" runat="server" Text='<%# string.Concat(" : ",Eval("WorkPartyName")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Receive Quantity  &nbsp; : &nbsp;
-                                <asp:Label ID="lblQuantityReceive" runat="server" Text='<%# string.Concat(" : ",Eval("QuantityReceived")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Damage Quantity  &nbsp; : &nbsp;
-                                <asp:Label ID="lblQuantityDamaged" runat="server" Text='<%# string.Concat(" : ",Eval("QuantityDamaged")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Actual Quantity &nbsp; : &nbsp;
-                                <asp:Label ID="lblQuantityActual" runat="server" Text='<%# string.Concat(" : ",Eval("QuantityActual")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Estimated Delivery Date &nbsp; : &nbsp;
-                                <asp:Label ID="lblEstimatedDeliveryDate" runat="server" Text='<%# string.Concat(" : ",Eval("EstimatedDeliveryDate","{0:dd-MM-yyyy}")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Rate(per Quantity) &nbsp; : &nbsp;
-                                <asp:Label ID="lblRate" runat="server" Text='<%# string.Concat(" : ",Eval("Rate")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Total Amount &nbsp; : &nbsp;
-                                <asp:Label ID="lblTotalAmount" runat="server" Text='<%# string.Concat(" : ",Eval("TotalAmount")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Remarks &nbsp; : &nbsp;
-                                <asp:Label ID="lblRemarks" runat="server" Text='<%# string.Concat(" : ",Eval("Remarks")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Creation Date &nbsp; : &nbsp;
-                                <asp:Label ID="lblCreationDate" runat="server" Text='<%# string.Concat(" : ",Eval("CreationDate")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-6">
-                                        <i class="sidebar-brand-text mx-1" style="font-size: medium"></i>Modified Date &nbsp; : &nbsp;
-                                <asp:Label ID="lblModifiedDate" runat="server" Text='<%# string.Concat(" : ",Eval("ModifiedDate")) %>'></asp:Label>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="form-horizontal table-responsive" role="form">
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblWorkPartyName_XXXXX" Text="Party" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblWorkPartyName" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblJobTypeName_XXXXX" Text="Job Type" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblJobTypeName" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblQuantityReceive_XXXXX" Text="Qty. Received" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblQuantityReceive" runat="server" CssClass="alert alert-primary"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblQuantityDamaged_XXXXX" Text="Qty. Damage" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblQuantityDamaged" runat="server" CssClass="alert alert-danger"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblQuantityActual_XXXXX" Text="Qty. Actual" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblQuantityActual" runat="server" CssClass="alert alert-success"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblEstimatedDeliveryDate_XXXXX" Text="Estimated Delivery Date" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblEstimatedDeliveryDate" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblRate_XXXXX" Text="Rate<small>(per Quantity)<small>" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblRate" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblTotalAmount_XXXXX" Text="Total Amount" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblTotalAmount" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

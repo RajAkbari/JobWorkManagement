@@ -31,9 +31,6 @@ public partial class AdminPanel_JWM_JobWorkReceive_JWM_WorkReceiveDetails : Syst
             {
                 foreach (DataRow dr in dtJWM_JobWorkReceive.Rows)
                 {
-                    if (!dr["JobWorkReceiveID"].Equals(DBNull.Value))
-                        lblJobWorkReceive.Text = Convert.ToString(dr["JobWorkReceiveID"]);
-
                     if (!dr["JobTypeName"].Equals(DBNull.Value))
                         lblJobTypeName.Text = Convert.ToString(dr["JobTypeName"]);
 
@@ -57,15 +54,6 @@ public partial class AdminPanel_JWM_JobWorkReceive_JWM_WorkReceiveDetails : Syst
 
                     if (!dr["TotalAmount"].Equals(DBNull.Value))
                         lblTotalAmount.Text = Convert.ToString(dr["TotalAmount"]);
-
-                    if (!dr["Remarks"].Equals(DBNull.Value))
-                        lblRemarks.Text = Convert.ToString(dr["Remarks"]);
-
-                    if (!dr["CreationDate"].Equals(DBNull.Value))
-                        lblCreationDate.Text = Convert.ToString(dr["CreationDate"]);
-
-                    if (!dr["ModifiedDate"].Equals(DBNull.Value))
-                        lblModifiedDate.Text = Convert.ToString(dr["ModifiedDate"]);
                 }
             }
         }
