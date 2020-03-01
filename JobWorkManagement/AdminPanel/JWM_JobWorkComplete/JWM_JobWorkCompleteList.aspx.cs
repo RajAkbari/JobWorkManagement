@@ -129,6 +129,7 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteList : System.Web.U
         ddlWorkParty.SelectedValue = "-1";
         txtfromdate.Text = "";
         txttodate.Text = "";
+        search();
     }
 
     #endregion Button : Clear

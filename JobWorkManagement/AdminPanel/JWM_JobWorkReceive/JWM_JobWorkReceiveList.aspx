@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2">
-                        <asp:Button runat="server" ID="btnShow" Text="show" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnShow_Click" />
+                        <asp:Button runat="server" ID="btnShow" Text="Search" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnShow_Click" />
                         <asp:Button runat="server" ID="btnClear" Text="Clear" CssClass="btn btn-danger btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnClear_Click" />
                     </div>
                 </div>
@@ -85,8 +85,8 @@
                                 <asp:BoundField DataField="QuantityReceived" HeaderText="Qty Received" Visible="false" />
                                 <asp:BoundField DataField="QuantityDamaged" HeaderText="Qty Damaged" Visible="false" />
                                 <asp:BoundField DataField="QuantityActual" HeaderText="Qty<br />Actual" HtmlEncode="false" ItemStyle-ForeColor="DarkBlue" />
-                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty<br />Complete" HtmlEncode="false" ItemStyle-ForeColor="Green" />
                                 <asp:BoundField DataField="QuantityPanding" HeaderText="Qty<br />Panding" HtmlEncode="false" ItemStyle-ForeColor="red" />
+                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty<br />Complete" HtmlEncode="false" ItemStyle-ForeColor="Green" />
                                 <asp:BoundField DataField="JobWorkReceiveDate" HeaderText="Receive Date" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-Width="15%" />
                                 <asp:BoundField DataField="EstimatedDeliveryDate" HeaderText="Estimated Date" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-Width="15%" />
                                 <asp:BoundField DataField="Rate" HeaderText="Rate" />

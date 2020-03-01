@@ -129,6 +129,7 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveList : System.W
         ddlWorkParty.SelectedValue = "-1";
         txtfromdate.Text = "";
         txttodate.Text = "";
+        search();
     }
 
     #endregion Button : Clear

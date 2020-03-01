@@ -35,8 +35,8 @@
                         <li class="nav-item" role="presentation"><a class="nav-link" href="<%=ResolveClientUrl("~/AdminPanel/JWM_JobWorkReceive/JWM_JobWorkReceiveList.aspx")%>"><i class="fas fa-table"></i><span>Work Receive</span></a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="<%=ResolveClientUrl("~/AdminPanel/JWM_JobWorkComplete/JWM_JobWorkCompleteList.aspx")%>"><i class="fas fa-key"></i><span>Work Complete</span></a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="<%=ResolveClientUrl("~/AdminPanel/JWM_PaymentReceive/JWM_PaymentReceiveList.aspx")%>"><i class="fas fa-exclamation-circle"></i><span>Payment Receive</span></a></li>
-                        <%--<li class="nav-item" role="presentation"><a class="nav-link" href="<%=ResolveClientUrl("~/JWM_LogIn/JWM_LogIn.aspx")%>"><i class="far fa-user-circle"></i><span>Login</span></a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="<%=ResolveClientUrl("~/JWM_SignUp/JWM_SignUp.aspx")%>"><i class="fas fa-user-circle"></i><span>Register</span></a></li>--%>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="<%=ResolveClientUrl("~/AdminPanel/JWM_PartyLedges/JWM_WorkPartyLedges.aspx")%>"><i class="far fa-user-circle"></i><span>Party Ledge</span></a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="<%=ResolveClientUrl("~/AdminPanel/JWM_ItemLedges/JWM_JobWorkSummary.aspx")%>"><i class="fas fa-user-circle"></i><span>Work Summary</span></a></li>
                     </ul>
                     <div class="text-center d-none d-md-inline">
                         <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>

@@ -35,7 +35,7 @@
             <div class="card-body">
                 <div class="form-group row">
                     <div class="col-sm-3">
-                        <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass=" form-control select2me"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass=" form-control form-control-sm"></asp:DropDownList>
                     </div>
                     <div class="col-sm-7">
                         <div class="form-group input-group input-daterange">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2">
-                        <asp:Button runat="server" ID="btnShow" Text="show" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnShow_Click" />
+                        <asp:Button runat="server" ID="btnShow" Text="Search" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnShow_Click" />
                         <asp:Button runat="server" ID="btnClear" Text="Clear" CssClass="btn btn-danger btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnClear_Click" />
                     </div>
                 </div>
@@ -74,8 +74,11 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="SrNo" HeaderText="Sr." />
-                                <asp:BoundField DataField="JobWorkReceiveName" HeaderText="Work Receive" />
-                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty Complete" />
+                                <asp:BoundField DataField="WorkPartyName" HeaderText="Party" />
+                                <asp:BoundField DataField="JobtypeName" HeaderText="Type" />
+                                <asp:BoundField DataField="QuantityActual" HeaderText="Qty<br />Received" HtmlEncode="false" ItemStyle-ForeColor="DarkBlue" />
+                                <asp:BoundField DataField="QuantityPanding" HeaderText="Qty<br />Panding" HtmlEncode="false" ItemStyle-ForeColor="red" />
+                                <asp:BoundField DataField="QuantityCompleted" HeaderText="Qty<br />Complete" HtmlEncode="false" ItemStyle-ForeColor="Green" />
                                 <asp:BoundField DataField="JobWorkCompleteDate" HeaderText="Complete Date" DataFormatString="{0:dd/MM/yyyy}" />
                             </Columns>
                         </asp:GridView>

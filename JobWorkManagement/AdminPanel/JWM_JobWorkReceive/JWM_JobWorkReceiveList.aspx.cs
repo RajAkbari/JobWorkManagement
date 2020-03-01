@@ -129,6 +129,7 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveList : System.Web.UI.
         ddlWorkParty.SelectedValue = "-1";
         txtfromdate.Text = "";
         txttodate.Text = "";
+        search();
     }
 
     #endregion Button : Clear

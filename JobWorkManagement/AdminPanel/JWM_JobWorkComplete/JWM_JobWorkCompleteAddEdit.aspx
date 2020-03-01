@@ -19,14 +19,14 @@
                             <div class="form-group">
                                 <label>Party :</label>
                                 <asp:DropDownList ID="ddlWorkParty" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlWorkParty_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
-                                <asp:RequiredFieldValidator runat="server" ID="rfvddlWorkParty" ControlToValidate="ddlWorkParty" InitialValue="-1" ErrorMessage="Select Job Type" ForeColor="Red" SetFocusOnError="True" Display="Dynamic" />
+                                <asp:RequiredFieldValidator runat="server" ID="rfvddlWorkParty" ControlToValidate="ddlWorkParty" InitialValue="-1" ErrorMessage="Select Job Type" ForeColor="Red" Display="Dynamic" />
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Work Receive :</label>
-                                <asp:DropDownList ID="ddlWorkReceive" runat="server" CssClass="form-control" AutoPostBack="true"></asp:DropDownList>
-                                <asp:RequiredFieldValidator runat="server" ID="rfvddlWorkReceive" ControlToValidate="ddlWorkReceive" InitialValue="-1" ErrorMessage="Select Work Party" ForeColor="Red" SetFocusOnError="True" Display="Dynamic" />
+                                <asp:DropDownList ID="ddlWorkReceive" runat="server" CssClass="form-control"></asp:DropDownList>
+                                <asp:RequiredFieldValidator runat="server" ID="rfvddlWorkReceive" ControlToValidate="ddlWorkReceive" InitialValue="-1" ErrorMessage="Select Work Party" ForeColor="Red" Display="Dynamic" />
                             </div>
                         </div>
                     </div>
@@ -43,6 +43,7 @@
                                 <label>Quantity Complete:</label>
                                 <asp:TextBox type="text" ID="txtQuantityComplete" runat="server" class="form-control" placeholder="Enter Quantity Done"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvQuantityComplete" runat="server" ControlToValidate="txtQuantityComplete" ErrorMessage="Enter Quantity Complete" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                <asp:CompareValidator ID="cvQuantityComplete" runat="server" ErrorMessage="Must be Greater than zero" ControlToValidate="txtQuantityComplete" ValueToCompare="0" Operator="GreaterThan" Type="Integer" ForeColor="Red" Display="Dynamic"></asp:CompareValidator>
                             </div>
                         </div>
                     </div>
