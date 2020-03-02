@@ -36,26 +36,26 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Label ID="lblQuantityReceive_XXXXX" Text="Qty. Received" runat="server"></asp:Label>
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblQuantityReceive" runat="server" CssClass="alert alert-primary"></asp:Label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="lblQuantityDamaged_XXXXX" Text="Qty. Damage" runat="server"></asp:Label>
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblQuantityDamaged" runat="server" CssClass="alert alert-danger"></asp:Label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
                                     <asp:Label ID="lblQuantityActual_XXXXX" Text="Qty. Actual" runat="server"></asp:Label>
                                 </td>
                                 <td>
-                                    <asp:Label ID="lblQuantityActual" runat="server" CssClass="alert alert-success"></asp:Label>
+                                    <asp:Label ID="lblQuantityActual" runat="server" CssClass="alert alert-primary"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblQuantityPanding_XXXXX" Text="Qty. Panding" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblQuantityPanding" runat="server" CssClass="alert alert-danger"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblQuantityCompleted_XXXXX" Text="Qty. Complete" runat="server"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblQuantityCompleted" runat="server" CssClass="alert alert-success"></asp:Label>
                                 </td>
                             </tr>
                             <tr>

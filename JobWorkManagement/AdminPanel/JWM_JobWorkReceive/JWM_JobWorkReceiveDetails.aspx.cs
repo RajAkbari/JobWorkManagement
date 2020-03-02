@@ -37,14 +37,14 @@ public partial class AdminPanel_JWM_JobWorkReceive_JWM_WorkReceiveDetails : Syst
                     if (!dr["WorkPartyName"].Equals(DBNull.Value))
                         lblWorkPartyName.Text = Convert.ToString(dr["WorkPartyName"]);
 
-                    if (!dr["QuantityReceived"].Equals(DBNull.Value))
-                        lblQuantityReceive.Text = Convert.ToString(dr["QuantityReceived"]);
-
-                    if (!dr["QuantityDamaged"].Equals(DBNull.Value))
-                        lblQuantityDamaged.Text = Convert.ToString(dr["QuantityDamaged"]);
-
                     if (!dr["QuantityActual"].Equals(DBNull.Value))
                         lblQuantityActual.Text = Convert.ToString(dr["QuantityActual"]);
+
+                    if (!dr["QuantityCompleted"].Equals(DBNull.Value))
+                        lblQuantityCompleted.Text = Convert.ToString(dr["QuantityCompleted"]);
+
+                    if (!dr["QuantityPanding"].Equals(DBNull.Value))
+                        lblQuantityPanding.Text = Convert.ToString(dr["QuantityPanding"]);
 
                     if (!dr["EstimatedDeliveryDate"].Equals(DBNull.Value))
                         lblEstimatedDeliveryDate.Text = Convert.ToString(dr["EstimatedDeliveryDate"]);

@@ -31,26 +31,23 @@ public partial class AdminPanel_JWM_JobWorkComplete_JWM_JobWorkCompleteDetails :
             {
                 foreach (DataRow dr in dtJWM_JobWorkComplete.Rows)
                 {
-                    if (!dr["JobWorkCompleteID"].Equals(DBNull.Value))
-                        lblJobWorkCompleteID.Text = Convert.ToString(dr["JobWorkCompleteID"]);
-
-                    if (!dr["JobWorkReceiveID"].Equals(DBNull.Value))
-                        lblJobWorkReceive.Text = Convert.ToString(dr["JobWorkReceiveID"]);
-
                     if (!dr["WorkPartyName"].Equals(DBNull.Value))
                         lblWorkPartyName.Text = Convert.ToString(dr["WorkPartyName"]);
 
                     if (!dr["JobWorkCompleteDate"].Equals(DBNull.Value))
                         lblWorkCompleteDate.Text = Convert.ToString(dr["JobWorkCompleteDate"]);
 
+                    if (!dr["JobTypeName"].Equals(DBNull.Value))
+                        lblJobTypeName.Text = Convert.ToString(dr["JobTypeName"]);
+
+                    if (!dr["QuantityActual"].Equals(DBNull.Value))
+                        lblQuantityActual.Text = Convert.ToString(dr["QuantityActual"]);
+
+                    if (!dr["QuantityPanding"].Equals(DBNull.Value))
+                        lblQuantityPanding.Text = Convert.ToString(dr["QuantityPanding"]);
+
                     if (!dr["QuantityCompleted"].Equals(DBNull.Value))
                         lblQuantityComplete.Text = Convert.ToString(dr["QuantityCompleted"]);
-
-                    if (!dr["CreationDate"].Equals(DBNull.Value))
-                        lblCreationDate.Text = Convert.ToString(dr["CreationDate"]);
-
-                    if (!dr["ModifiedDate"].Equals(DBNull.Value))
-                        lblModifiedDate.Text = Convert.ToString(dr["ModifiedDate"]);
                 }
             }
         }
