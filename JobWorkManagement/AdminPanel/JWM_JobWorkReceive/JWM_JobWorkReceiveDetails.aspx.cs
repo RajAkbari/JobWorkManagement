@@ -37,6 +37,9 @@ public partial class AdminPanel_JWM_JobWorkReceive_JWM_WorkReceiveDetails : Syst
                     if (!dr["WorkPartyName"].Equals(DBNull.Value))
                         lblWorkPartyName.Text = Convert.ToString(dr["WorkPartyName"]);
 
+                    if (!dr["JobWorkReceiveDate"].Equals(DBNull.Value))
+                        lblJobWorkReceiveDate.Text = Convert.ToDateTime(dr["JobWorkReceiveDate"]).ToString("dd-MM-yyyy");
+
                     if (!dr["QuantityActual"].Equals(DBNull.Value))
                         lblQuantityActual.Text = Convert.ToString(dr["QuantityActual"]);
 
@@ -47,7 +50,7 @@ public partial class AdminPanel_JWM_JobWorkReceive_JWM_WorkReceiveDetails : Syst
                         lblQuantityPanding.Text = Convert.ToString(dr["QuantityPanding"]);
 
                     if (!dr["EstimatedDeliveryDate"].Equals(DBNull.Value))
-                        lblEstimatedDeliveryDate.Text = Convert.ToString(dr["EstimatedDeliveryDate"]);
+                        lblEstimatedDeliveryDate.Text = Convert.ToDateTime(dr["EstimatedDeliveryDate"]).ToString("dd-MM-yyyy");
 
                     if (!dr["Rate"].Equals(DBNull.Value))
                         lblRate.Text = Convert.ToString(dr["Rate"]);

@@ -35,7 +35,7 @@ public partial class AdminPanel_JWM_JobWorkComplete_JWM_JobWorkCompleteDetails :
                         lblWorkPartyName.Text = Convert.ToString(dr["WorkPartyName"]);
 
                     if (!dr["JobWorkCompleteDate"].Equals(DBNull.Value))
-                        lblWorkCompleteDate.Text = Convert.ToString(dr["JobWorkCompleteDate"]);
+                        lblWorkCompleteDate.Text = Convert.ToDateTime(dr["JobWorkCompleteDate"]).ToString("dd-MM-yyyy");
 
                     if (!dr["JobTypeName"].Equals(DBNull.Value))
                         lblJobTypeName.Text = Convert.ToString(dr["JobTypeName"]);

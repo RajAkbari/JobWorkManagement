@@ -104,7 +104,7 @@ public partial class AdminPanel_JWM_PaymentReceive_PaymentReceiveList : System.W
             EndDate = DateTime.Parse(txttodate.Text.Trim());
 
         JWM_PaymentReceiveBAL balJobWorkReceive = new JWM_PaymentReceiveBAL();
-        DataTable dtPaymentReceive = balJobWorkReceive.SelectDuplicate(WorkPartyID, StartDate, EndDate);
+        DataTable dtPaymentReceive = balJobWorkReceive.Search(WorkPartyID, StartDate, EndDate);
         if (dtPaymentReceive != null && dtPaymentReceive.Rows.Count > 0)
         {
             gvPaymentReceiveList.DataSource = dtPaymentReceive;

@@ -11,10 +11,10 @@ namespace JobWorkManagement.BAL
     {
         #region Search
 
-        public DataTable SelectDuplicate(SqlString WorkPartyName)
+        public DataTable Search(SqlString WorkPartyName)
         {
             JWM_WorkPartyDAL dalJWM_WorkParty = new JWM_WorkPartyDAL();
-            return dalJWM_WorkParty.SelectDuplicate(WorkPartyName);
+            return dalJWM_WorkParty.Search(WorkPartyName);
         }
 
         #endregion Search

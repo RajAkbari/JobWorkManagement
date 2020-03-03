@@ -400,7 +400,7 @@ namespace JobWorkManagement.DAL
                         #region Prepare Command
 
                         objCmd.CommandType = CommandType.StoredProcedure;
-                        objCmd.CommandText = "PR_JWM_JobWorkComplete_DropDownListByWorkPartyID";
+                        objCmd.CommandText = "PR_JWM_JobWorkComplete_SelectByDropDownListByWorkPartyID";
                         objCmd.Parameters.AddWithValue("@WorkPartyID", WorkPartyID);
 
                         #endregion Prepare Command

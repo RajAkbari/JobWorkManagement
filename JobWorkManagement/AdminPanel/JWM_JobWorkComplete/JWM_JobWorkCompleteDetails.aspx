@@ -11,7 +11,7 @@
 
             <div class="card shadow">
                 <div class="card-header py-3">
-                    <p class="text-primary m-0 text-xl-center font-weight-bold"><i class="fas fa-exclamation-circle sidebar-brand-text mx-1"></i><span>Job Work Complete Info</span></p>
+                    <p class="text-primary m-0 text-xl-center font-weight-bold"><i class="fas fa-exclamation-circle sidebar-brand-text mx-1"></i><span>Work Complete Info</span></p>
                 </div>
             </div>
             <div class="card shadow">
@@ -19,7 +19,7 @@
                     <div class="form-horizontal table-responsive" role="form">
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <td>
+                                <td style="width: 300px">
                                     <asp:Label ID="lblWorkPartyName_XXXXX" Text="Party" runat="server"></asp:Label>
                                 </td>
                                 <td>

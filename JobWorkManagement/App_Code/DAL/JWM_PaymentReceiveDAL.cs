@@ -12,7 +12,7 @@ namespace JobWorkManagement.DAL
     {
         #region Search
 
-        public DataTable SelectDuplicate(SqlInt32 WorkPartyID, SqlDateTime StartDate, SqlDateTime EndDate)
+        public DataTable Search(SqlInt32 WorkPartyID, SqlDateTime StartDate, SqlDateTime EndDate)
         {
             using (SqlConnection objConn = new SqlConnection(ConnectionString))
             {

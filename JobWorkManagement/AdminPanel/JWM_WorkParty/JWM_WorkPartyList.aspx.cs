@@ -65,7 +65,7 @@ public partial class AdminPanel_JWM_WorkParty_WorkPartyList : System.Web.UI.Page
             WorkPartyName = txtWorkParty.Text.Trim();
 
         JWM_WorkPartyBAL balWorkParty = new JWM_WorkPartyBAL();
-        DataTable dtWorkParty = balWorkParty.SelectDuplicate(WorkPartyName);
+        DataTable dtWorkParty = balWorkParty.Search(WorkPartyName);
         if (dtWorkParty != null && dtWorkParty.Rows.Count > 0)
         {
             gvWorkPartyList.DataSource = dtWorkParty;

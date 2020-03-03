@@ -104,7 +104,7 @@ public partial class AdminPanel_JWM_WorkComplete_WorkCompleteList : System.Web.U
             EndDate = DateTime.Parse(txttodate.Text.Trim());
 
         JWM_JobWorkCompleteBAL balJobWorkComplete = new JWM_JobWorkCompleteBAL();
-        DataTable dtJobWorkComplete = balJobWorkComplete.SelectDuplicate(WorkPartyID, StartDate, EndDate);
+        DataTable dtJobWorkComplete = balJobWorkComplete.Search(WorkPartyID, StartDate, EndDate);
         if (dtJobWorkComplete != null && dtJobWorkComplete.Rows.Count > 0)
         {
             gvJobWorkCompleteList.DataSource = dtJobWorkComplete;

@@ -19,7 +19,7 @@
                     <div class="form-horizontal table-responsive" role="form">
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <td>
+                                <td style="width: 300px">
                                     <asp:Label ID="lblWorkPartyName_XXXXX" Text="Party" runat="server"></asp:Label>
                                 </td>
                                 <td>

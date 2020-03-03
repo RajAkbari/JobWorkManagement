@@ -104,7 +104,7 @@ public partial class AdminPanel_JWM_WorkReceive_WorkReceiveList : System.Web.UI.
             EndDate = DateTime.Parse(txttodate.Text.Trim());
 
         JWM_JobWorkReceiveBAL balJobWorkReceive = new JWM_JobWorkReceiveBAL();
-        DataTable dtJobWorkReceive = balJobWorkReceive.SelectDuplicate(WorkPartyID, StartDate, EndDate);
+        DataTable dtJobWorkReceive = balJobWorkReceive.Search(WorkPartyID, StartDate, EndDate);
         if (dtJobWorkReceive != null && dtJobWorkReceive.Rows.Count > 0)
         {
             gvJobWorkReceiveList.DataSource = dtJobWorkReceive;

@@ -11,10 +11,10 @@ namespace JobWorkManagement.BAL
     {
         #region Search
 
-        public DataTable SelectDuplicate(SqlInt32 WorkPartyID, SqlDateTime StartDate, SqlDateTime EndDate)
+        public DataTable Search(SqlInt32 WorkPartyID, SqlDateTime StartDate, SqlDateTime EndDate)
         {
             JWM_PaymentReceiveDAL dalJWM_JobPaymentReceive = new JWM_PaymentReceiveDAL();
-            return dalJWM_JobPaymentReceive.SelectDuplicate(WorkPartyID, StartDate, EndDate);
+            return dalJWM_JobPaymentReceive.Search(WorkPartyID, StartDate, EndDate);
         }
 
         #endregion Search
