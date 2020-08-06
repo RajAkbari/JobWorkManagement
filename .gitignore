@@ -1,15 +1,1 @@
-
-JobWorkManagement/.vs/JobWorkManagement/v16/.suo
-JobWorkManagement/packages/Habanero.3.0.1/.signature.p7s
-JobWorkManagement/packages/Habanero.3.0.1/Habanero.3.0.1.nupkg
-JobWorkManagement/packages/Habanero.3.0.1/lib/Habanero.BO.dll
-JobWorkManagement/packages/Habanero.3.0.1/lib/Habanero.Console.dll
-JobWorkManagement/packages/Habanero.3.0.1/lib/Habanero.DB.dll
-JobWorkManagement/packages/Habanero.3.0.1/lib/Habanero.Base.dll
-JobWorkManagement/.vs/JobWorkManagement/v16/.suo
-*.lock
-*.ide
-*.ide-shm
-*.ide-wal
-JobWorkManagement/.vs/JobWork Management/v16/.suo
-JobWorkManagement/.vs/JobWork Management/v16/.suo
+/bin
