@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\JobWorkManagement"
+    "\\JobWorkManagement",
+    "\\JobWorkManagement\\AdminPanel",
+    "\\JobWorkManagement\\AdminPanel\\JWM_JobType"
   ],
+  "SelectedNode": "\\JobWorkManagement\\AdminPanel\\JWM_JobType\\JWM_JobTypeAddEdit.aspx",
   "PreviewInSolutionExplorer": false
 }
