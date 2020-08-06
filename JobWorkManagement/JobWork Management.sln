@@ -7,20 +7,21 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "JobWorkManagement(2)", ".",
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_57653"
-		Debug.AspNetCompiler.PhysicalPath = "E:\Github\JobWorkManagement\JobWorkManagement\"
+		Debug.AspNetCompiler.PhysicalPath = "..\JobWorkManagement\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57653\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_57653"
-		Release.AspNetCompiler.PhysicalPath = "E:\Github\JobWorkManagement\JobWorkManagement\"
+		Release.AspNetCompiler.PhysicalPath = "..\JobWorkManagement\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57653\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "57653"
+		SlnRelativePath = "..\JobWorkManagement\"
 	EndProjectSection
 EndProject
 Global
