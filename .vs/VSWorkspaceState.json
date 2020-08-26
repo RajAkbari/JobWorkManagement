@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\JobWorkManagement",
-    "\\JobWorkManagement\\AdminPanel",
-    "\\JobWorkManagement\\AdminPanel\\JWM_JobType"
+    "\\JobWorkManagement\\App_Code",
+    "\\JobWorkManagement\\App_Code\\DAL"
   ],
-  "SelectedNode": "\\JobWorkManagement\\AdminPanel\\JWM_JobType\\JWM_JobTypeAddEdit.aspx",
+  "SelectedNode": "\\JobWorkManagement",
   "PreviewInSolutionExplorer": false
 }
