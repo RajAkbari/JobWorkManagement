@@ -17,6 +17,16 @@ namespace JobWorkManagement.BAL
             return dalJWM_JobWorkReceive.Search(WorkPartyID, StartDate, EndDate);
         }
 
-        #endregion Search
+        #endregion Search 
+        
+        #region Summary
+
+        public DataTable Summary(SqlInt32 JobTypeID, SqlInt32 WorkPartyID, SqlDateTime StartDate, SqlDateTime EndDate)
+        {
+            JWM_JobWorkReceiveDAL dalJWM_JobWorkReceive = new JWM_JobWorkReceiveDAL();
+            return dalJWM_JobWorkReceive.Summary(JobTypeID, WorkPartyID, StartDate, EndDate);
+        }
+
+        #endregion Summary
     }
 }

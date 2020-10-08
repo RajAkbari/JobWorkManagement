@@ -16,7 +16,15 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" runat="Server">
-    <div class="container-fluid">
+     <div class="container-fluid">
+        <div class="d-sm-flex justify-content-between align-items-center mb-4">
+            <h4 class="text-dark mb-0">
+                <asp:Label ID="lblHeader" runat="server" Text="Work Ledge"></asp:Label>
+                (<asp:Label ID="lblCount" runat="server" Text="Total Record"></asp:Label>)
+            </h4>
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+        </div>
+
         <div class="card shadow">
             <div class="card-header py-3">
                 <p class="text-primary m-0 font-weight-bold"><i class="fas fa-cogs sidebar-brand-text mx-1"></i><span>Search</span></p>
@@ -33,10 +41,10 @@
                             <asp:TextBox type="text" ID="txttodate" runat="server" class="form-control form-control-sm" TextMode="Date"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <asp:Button runat="server" ID="btnShow" Text="Search" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" />
-                        <asp:Button runat="server" ID="btnClear" Text="Clear" CssClass="btn btn-danger btn-sm d-sm-inline-block" ValidationGroup="show" />
-                    </div>
+                     <div class="col-sm-2 float-right">
+                      <asp:Button runat="server" ID="btnShow" Text="Search" CssClass="btn btn-success btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnShow_Click" />
+                      <asp:Button runat="server" ID="btnClear" Text="Clear" CssClass="btn btn-danger btn-sm d-sm-inline-block" ValidationGroup="show" OnClick="btnClear_Click" />
+               </div>
                 </div>
             </div>
         </div>
@@ -50,15 +58,18 @@
                 </p>
             </div>
             <div class="card-body">
-                <div class="form-group row">
-                    <div class="col-sm-3">
-                        <asp:Label ID="lblOpeningBalance_XXXXX" runat="server" Text="<b>Opening Balance</b>"></asp:Label>
-                        <asp:TextBox type="text" ID="txtOpeningBalance" runat="server" class="form-control form-control-sm" ReadOnly="true"></asp:TextBox>
-                    </div>
-                </div>
-                <hr />
-                <div class="table-hover table-responsive-sm table " id="dataTable" role="grid" aria-describedby="dataTable_info">
+                <div class="table-responsive" id="dataTable" role="grid" aria-describedby="dataTable_info">
                     <table class="table dataTable my-0">
+                        <asp:GridView ID="gvWorkLedge" runat="server" AutoGenerateColumns="False"  CssClass="table table-bordered text-nowrap">
+                            <Columns>
+                                <asp:BoundField DataField="SrNo" HeaderText="Sr." />
+                                <asp:BoundField DataField="WorkPartyName" HeaderText="Party" ItemStyle-Width="15%" />
+                                <asp:BoundField DataField="TransactionDate" HeaderText="Date" />
+                                <asp:BoundField DataField="DebitAmount" HeaderText="Debit<br/>Amount" HtmlEncode="false"  />
+                                <asp:BoundField DataField="CreditAmount" HeaderText="Credit<br/>Amount" HtmlEncode="false"  />
+                                <asp:BoundField DataField="Balance" HeaderText="Balance"  />
+                            </Columns>
+                        </asp:GridView>
                     </table>
                 </div>
             </div>

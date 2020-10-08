@@ -18,5 +18,15 @@ namespace JobWorkManagement.BAL
         }
 
         #endregion Search
+
+        #region WorkLedge
+
+        public DataTable WorkLedge(SqlInt32 WorkPartyID, SqlDateTime StartDate, SqlDateTime EndDate)
+        {
+            JWM_WorkPartyDAL dalJWM_WorkParty = new JWM_WorkPartyDAL();
+            return dalJWM_WorkParty.WorkLedge(WorkPartyID, StartDate, EndDate);
+        }
+
+        #endregion WorkLedge
     }
 }
